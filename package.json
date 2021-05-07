@@ -1,5 +1,36 @@
 {
   "dependencies": {
+    "file-loader": "^6.2.0",
+    "style-loader": "^2.0.0"
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.4",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
-  }
+  },
+  "name": "webpack-basics",
+  "description": "`#html` `#css` `#sass` `#javascript` `#webpack` `#es6` `#master-in-software-engineering`",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orionalfa/webpack-basics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orionalfa/webpack-basics/issues"
+  },
+  "homepage": "https://github.com/orionalfa/webpack-basics#readme"
 }
