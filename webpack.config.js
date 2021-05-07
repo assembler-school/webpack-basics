@@ -30,6 +30,10 @@ module.exports = {
             template: 'src/index.html',
             hash: true
         }),
-        new MiniCSSExtractPlugin()
+        new MiniCSSExtractPlugin(),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+          })
     ]
 }
