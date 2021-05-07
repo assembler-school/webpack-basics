@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "file-loader": "^6.2.0",
-    "style-loader": "^2.0.0"
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "css-loader": "^5.2.4",
