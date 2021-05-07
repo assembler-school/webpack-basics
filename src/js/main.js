@@ -6,3 +6,4 @@ import "../images/clipart.png";
 import "../images/dm.png";
 import "../images/instagram.png";
 import "../images/parque-grande.jpg";
+import "../images/lightweight.svg";
