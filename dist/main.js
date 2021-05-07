@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \*********************/
 /***/ (() => {
 
-eval("const btn = document.getElementById(\"btn\");\r\nbtn.addEventListener('click', _ => {\r\n    alert('asdsad');\r\n    btn.addClass('.top');\r\n});\n\n//# sourceURL=webpack://webpack-basics/./src/main.js?");
+eval("const btn = document.getElementById(\"btn\");\r\nbtn.addEventListener('click', _ => {\r\n    alert('asdsad');\r\n    btn.className = 'top';\r\n});\n\n//# sourceURL=webpack://webpack-basics/./src/main.js?");
 
 /***/ })
 

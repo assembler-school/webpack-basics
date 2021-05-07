@@ -7,10 +7,14 @@
   height: 50vh;
   align-items: center;
   justify-content: space-around;
+  div {
+    display: inherit;
+    flex-direction: column;
+    @extend .cool-text;
+  }
 }
 
-
-body {
+body{
   display: flex;
   flex-basis: 100%;
   flex-direction: column;
@@ -22,7 +26,7 @@ body {
     height: 10vh;
     object-fit: scale-down;
   }
-  div {
+  div{
     background-color: cadetblue;
   }
 }
