@@ -1,1 +1,8 @@
-$("body").first.toggle("top")
+//import $ from "jquery";
+
+export function initBtnClick() {
+  $("#toggleBtn").click(function () {
+    console.log($("body").first());
+    $("body").first.toggle("top");
+  });
+}
