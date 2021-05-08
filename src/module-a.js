@@ -1,3 +1,4 @@
+export * from "./module-a.js"
 /*---- Arrow function example + Use pf let and const example ----*/
 //Arrow Function (with no arguments and no curly braces in this case)
 
@@ -5,7 +6,7 @@ let a = "Hello";
 const b = "Assembler";
 
 const btn = document.getElementById('btn');
-btn.addEventListener('click', showAlert = () => alert(a + " " + b));
+btn.addEventListener('click', () => alert(a + " " + b));
 
 /*-------------- ECMAScript 6 class structure -----------------*/
 
@@ -20,11 +21,12 @@ class Point {
 }
 
 /*-------------------- Template Strings --------------------*/
-`string text`
+function templateStrings(){
+    console.log(`string text`);
+    console.log(`string text line 1
+         string text line 2`);
+    // console.log(`string text ${expression} string text`);
+    // console.log(tag`string text ${expression} string text`); 
+}
 
-`string text line 1
- string text line 2`
-
-`string text ${expression} string text`
-
-tag`string text ${expression} string text`
+templateStrings()

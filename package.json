@@ -4,7 +4,8 @@
   "description": "`#html` `#css` `#sass` `#javascript` `#webpack` `#es6` `#master-in-software-engineering`",
   "main": "module-a.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/MarcSola/webpack-basics/issues"
   },
-  "homepage": "https://github.com/MarcSola/webpack-basics#readme"
+  "homepage": "https://github.com/MarcSola/webpack-basics#readme",
+  "devDependencies": {
+    "html-loader": "^2.1.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^5.3.1",
+    "jquery": "^3.6.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0"
+  }
 }
