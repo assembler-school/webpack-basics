@@ -1,14 +1,17 @@
 @mixin borders {
-  border: 1px solid rgb(180, 180, 180);
+  border: 3px solid rgb(255, 255, 255);
 }
 
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgb(17, 17, 17);
+  font-family: 'Spartan', sans-serif;
+  color: white;
 }
 .container {
-  width: 90%;
+  width: 100%;
   height: 400px;
   display: flex;
   justify-content: space-around;
@@ -21,6 +24,8 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
+    background-color: white;
     @include borders;
     .headCont {
       width: 100%;
@@ -29,22 +34,24 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center;
-      border-bottom: 1px solid rgb(180, 180, 180);
+      color: black;
+      box-shadow: -1px 10px 5px -2px rgba(219,219,219,1);
     }
     .cont {
       width: 100%;
       height: 80%;
+      padding: 15px;
+      color: black;
       display: flex;
       justify-content: center;
+      text-align: center;
       align-items: center;
-      padding: 15px;
       box-sizing: border-box;
     }
   }
   .result {
     width: 40%;
     height: 80%;
-    @include borders;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,11 +59,17 @@ body {
     box-sizing: border-box;
   }
   .btn {
-    width: 60%;
     height: 50px;
     margin-top: 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: rgb(49, 87, 255);
   }
-}
-.visibility {
-  visibility: hidden;
+  code{
+    width: 100%;
+    display: block;
+    white-space: pre-wrap; 
+  }
 }
