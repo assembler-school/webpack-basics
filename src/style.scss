@@ -1,0 +1,6 @@
+@use "./main" ;
+
+#btn{
+    // @extend main.textFormat;
+    color: main.$myColorBlue;
+}

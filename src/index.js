@@ -1,2 +1,3 @@
 import "./index.html";
-import "./main.js"
+import "./style.scss";
+import "./main.js";
