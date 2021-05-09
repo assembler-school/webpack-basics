@@ -1,0 +1,30 @@
+.container {
+  width: 90%;
+  height: 300px;
+  display: flex;
+  background-color: aquamarine;
+}
+.container .codeContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+}
+.container .codeContainer .headCont {
+  width: 100%;
+  height: 20%;
+  background-color: #e3ff85;
+}
+.container .codeContainer .cont {
+  width: 100%;
+  height: 80%;
+  background-color: #009c41;
+}
+.container .result {
+  width: 40%;
+  height: 80%;
+  background-color: #2d013a;
+}
+
+/*# sourceMappingURL=style.css.map */
