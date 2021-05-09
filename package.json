@@ -4,7 +4,8 @@
   "description": "`#html` `#css` `#sass` `#javascript` `#webpack` `#es6` `#master-in-software-engineering`",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "start": "webpack serve",
+    "build": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
