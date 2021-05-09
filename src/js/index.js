@@ -1,5 +1,6 @@
 import "../index.html";
 import "../../assets/main.scss";
-import "./main.js";
+import './module-a.js';
+import './module-b.js';
 import "../img/book.png";
 import "../img/iceland.png";
