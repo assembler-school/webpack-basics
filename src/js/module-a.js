@@ -65,7 +65,7 @@ $("#btnArrow").on(
 $("#btnClass").on(
     "click",
     (rectangulo = () =>
-      $("#resultClass").text(cuadrado.area))
+      $("#resultClass").text('Height: 10px | Width:10px = '+cuadrado.area))
   );
 
 //Make use of the Template Strings

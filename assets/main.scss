@@ -44,14 +44,13 @@ body {
       color: black;
       display: flex;
       justify-content: center;
-      text-align: center;
       align-items: center;
       box-sizing: border-box;
     }
   }
   .result {
     width: 40%;
-    height: 80%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,6 +59,7 @@ body {
   }
   .btn {
     height: 50px;
+    cursor: pointer;
     margin-top: 15px;
     color: white;
     border: none;
@@ -71,5 +71,17 @@ body {
     width: 100%;
     display: block;
     white-space: pre-wrap; 
+  }
+
+  .contImg {
+    width: 100%;
+    padding: 15%;
+    height: 100%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
   }
 }
