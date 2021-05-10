@@ -19,6 +19,14 @@ module.exports = {
       template: "./src/index.html",
     }),
     new ImageMinimizerPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      filter: (source) => {
+        if (source.byteLength >= 8192) {
+          return true;
+        }
+
+        return false;
+      },
       minimizerOptions: {
         // Lossless optimization with custom option
         // Feel free to experiment with options for better result for you
@@ -26,9 +34,8 @@ module.exports = {
           "imagemin-gifsicle",
           "imagemin-jpegtran",
           "imagemin-optipng",
-          "imagemin-svgo",
           [
-            "svgo",
+            "imagemin-svgo",
             {
               plugins: [
                 {
@@ -61,23 +68,6 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset",
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [
-          {
-            loader: "file-loader", // Or `url-loader` or your other loader
-          },
-          {
-            loader: ImageMinimizerPlugin.loader,
-            options: {
-              severityError: "warning", // Ignore errors on corrupted images
-              minimizerOptions: {
-                plugins: ["gifsicle"],
-              },
-            },
-          },
-        ],
       },
     ],
   },

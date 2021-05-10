@@ -31,50 +31,6 @@ eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n
 
 /***/ }),
 
-/***/ "./src/jpgbig.jpg":
-/*!************************!*\
-  !*** ./src/jpgbig.jpg ***!
-  \************************/
-/***/ ((module) => {
-
-"use strict";
-eval("module.exports = \"data:image/jpeg;base64,ZXhwb3J0IGRlZmF1bHQgX193ZWJwYWNrX3B1YmxpY19wYXRoX18gKyAiYzBlNzgzNWI3YmM3MjNhYzQ0OTkzNzYzOWZlYmMyNzYuanBnIjs=\";\n\n//# sourceURL=webpack://webpack-basics/./src/jpgbig.jpg?");
-
-/***/ }),
-
-/***/ "./src/pngbig.png":
-/*!************************!*\
-  !*** ./src/pngbig.png ***!
-  \************************/
-/***/ ((module) => {
-
-"use strict";
-eval("module.exports = \"data:image/png;base64,ZXhwb3J0IGRlZmF1bHQgX193ZWJwYWNrX3B1YmxpY19wYXRoX18gKyAiMjk3NTQwOWJiYjlhY2YxNDZmZGJkYzM0ZGNlYzczMDIucG5nIjs=\";\n\n//# sourceURL=webpack://webpack-basics/./src/pngbig.png?");
-
-/***/ }),
-
-/***/ "./src/pngsmall.png":
-/*!**************************!*\
-  !*** ./src/pngsmall.png ***!
-  \**************************/
-/***/ ((module) => {
-
-"use strict";
-eval("module.exports = \"data:image/png;base64,ZXhwb3J0IGRlZmF1bHQgX193ZWJwYWNrX3B1YmxpY19wYXRoX18gKyAiMDhkZGU5MzU2YjU3MzRmYTliZWYzNTg3OGRjMWNiMWYucG5nIjs=\";\n\n//# sourceURL=webpack://webpack-basics/./src/pngsmall.png?");
-
-/***/ }),
-
-/***/ "./src/svgsmall.svg":
-/*!**************************!*\
-  !*** ./src/svgsmall.svg ***!
-  \**************************/
-/***/ ((module) => {
-
-"use strict";
-eval("module.exports = \"data:image/svg+xml;base64,ZXhwb3J0IGRlZmF1bHQgX193ZWJwYWNrX3B1YmxpY19wYXRoX18gKyAiNGM2NmQxOTdiMWRkY2Y3OGJmODk1MjQ0OGFhODdiOGUuc3ZnIjs=\";\n\n//# sourceURL=webpack://webpack-basics/./src/svgsmall.svg?");
-
-/***/ }),
-
 /***/ "./src/index.html":
 /*!************************!*\
   !*** ./src/index.html ***!
@@ -94,6 +50,50 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    // eslint-disable-next-line no-param-reassign\n    options = {};\n  }\n\n  if (!url) {\n    return url;\n  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign\n\n\n  url = String(url.__esModule ? url.default : url);\n\n  if (options.hash) {\n    // eslint-disable-next-line no-param-reassign\n    url += options.hash;\n  }\n\n  if (options.maybeNeedQuotes && /[\\t\\n\\f\\r \"'=<>`]/.test(url)) {\n    return \"\\\"\".concat(url, \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack://webpack-basics/./node_modules/html-loader/dist/runtime/getUrl.js?");
+
+/***/ }),
+
+/***/ "./src/jpgbig.jpg":
+/*!************************!*\
+  !*** ./src/jpgbig.jpg ***!
+  \************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c0e7835b7bc723ac4499.jpg\";\n\n//# sourceURL=webpack://webpack-basics/./src/jpgbig.jpg?");
+
+/***/ }),
+
+/***/ "./src/pngbig.png":
+/*!************************!*\
+  !*** ./src/pngbig.png ***!
+  \************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2975409bbb9acf146fdb.png\";\n\n//# sourceURL=webpack://webpack-basics/./src/pngbig.png?");
+
+/***/ }),
+
+/***/ "./src/pngsmall.png":
+/*!**************************!*\
+  !*** ./src/pngsmall.png ***!
+  \**************************/
+/***/ ((module) => {
+
+"use strict";
+eval("module.exports = \"data:image/png;base64,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\";\n\n//# sourceURL=webpack://webpack-basics/./src/pngsmall.png?");
+
+/***/ }),
+
+/***/ "./src/svgsmall.svg":
+/*!**************************!*\
+  !*** ./src/svgsmall.svg ***!
+  \**************************/
+/***/ ((module) => {
+
+"use strict";
+eval("module.exports = \"data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIuMDA0IDUxMi4wMDQiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyLjAwNCA1MTIuMDA0IiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnPjxwYXRoIGQ9Im00OTMuOTcyIDMyLjUwOC00NzUuOTI2LS4wMTVjLTYuNjA3IDAtMTEuNzg2IDMuMjMzLTE0Ljg2OSA3LjgxMmw5LjU0NSAyMC4wNDEgMjAyLjY0MiAxNjQuMTk5IDI5NC4yMjMtMTgyLjk5NmMtMy4wMjYtNS4yNy04LjY2NS05LjA0MS0xNS42MTUtOS4wNDF6IiBmaWxsPSIjZmY3ZTkyIi8+PHBhdGggZD0ibTUwOS41ODcgNDEuNTQ5LTI5NS40MTQgMTY5LjU3OC0yMTAuOTk2LTE3MC44MjNjLTQuODQyIDcuMTgxLTQuNTE3IDE3LjY2OCAzLjU0MiAyNC4xOWwxOTIuMDkyIDE1NS40NSA1Ni41MjkgMjU5LjUyNmM1LjQ4Ni0uMzcxIDEwLjg2LTMuMjEzIDE0LjE3OC04Ljg5NmwyNDAuMDAyLTQxMC45ODFjMy41MDUtNi4wMDEgMy4wOTMtMTIuNzcyLjA2Ny0xOC4wNDR6IiBmaWxsPSIjZmY1ZjdhIi8+PHBhdGggZD0ibTE5OC44MSAyMTkuOTQ1IDM3LjM2MSAyNDQuMjcxYzEuNTcgMTAuMjY1IDEwLjUxMiAxNS44MzUgMTkuMTY4IDE1LjI1NGwtNDEuMTY2LTI2OC4zNDR6IiBmaWxsPSIjZmI0NDU1Ii8+PC9nPjwvc3ZnPg==\";\n\n//# sourceURL=webpack://webpack-basics/./src/svgsmall.svg?");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.html */ \"./src/index.html\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _module_a_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module-a.js */ \"./src/module-a.js\");\n/* harmony import */ var _module_a_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_module_a_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _module_b_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./module-b.js */ \"./src/module-b.js\");\n/* harmony import */ var _module_b_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_module_b_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _pngsmall_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pngsmall.png */ \"./src/pngsmall.png\");\n/* harmony import */ var _svgsmall_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./svgsmall.svg */ \"./src/svgsmall.svg\");\n/* harmony import */ var _pngbig_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pngbig.png */ \"./src/pngbig.png\");\n/* harmony import */ var _jpgbig_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./jpgbig.jpg */ \"./src/jpgbig.jpg\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack-basics/./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.html */ \"./src/index.html\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _module_a_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module-a.js */ \"./src/module-a.js\");\n/* harmony import */ var _module_a_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_module_a_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _module_b_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./module-b.js */ \"./src/module-b.js\");\n/* harmony import */ var _module_b_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_module_b_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _pngsmall_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pngsmall.png */ \"./src/pngsmall.png\");\n/* harmony import */ var _svgsmall_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./svgsmall.svg */ \"./src/svgsmall.svg\");\n/* harmony import */ var _pngbig_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pngbig.png */ \"./src/pngbig.png\");\n/* harmony import */ var _jpgbig_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./jpgbig.jpg */ \"./src/jpgbig.jpg\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack-basics/./src/main.js?");
 
 /***/ }),
 
@@ -214,6 +214,18 @@ eval("/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./no
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -228,6 +240,26 @@ eval("/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./no
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
