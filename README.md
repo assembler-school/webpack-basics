@@ -1,3 +1,5 @@
+`javascript` `webpack` `jquery` `html` `sass`
+
 # Webpack Project
 
 ## Get started 🚀
