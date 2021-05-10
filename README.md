@@ -14,7 +14,7 @@ _You must have npm installed. If not you can run:_
 npm install
 ```
 
-### Instalación 🔧
+### Installation 🔧
 
 _We need to set an enviroment installing the basics documents, scripts and modules_
 

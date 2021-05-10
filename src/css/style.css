@@ -69,6 +69,7 @@ body {
   width: 100%;
   display: block;
   white-space: pre-wrap;
+  font-weight: 600;
 }
 .container .contImg {
   width: 100%;
