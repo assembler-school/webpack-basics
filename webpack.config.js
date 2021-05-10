@@ -2,7 +2,6 @@ const webpack = require("webpack");
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-// const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
     entry: './src/index.js',
@@ -18,7 +17,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
-        // new CompressionPlugin()
         new ImageMinimizerPlugin({
           filter: (source) => {
             // The `source` argument is a `Buffer` of source file

@@ -59,3 +59,9 @@ To deliver this project you must follow the steps indicated in the document:
 
 - [WebPack Official](https://webpack.js.org/)
 - [ECMAScript 6 compatibility](https://kangax.github.io/compat-table/es6/)
+
+
+## Installation Process
+
+This section is meant to explain step by step the process followed to install webpack and the specific plugins used for this project:
+
