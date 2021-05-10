@@ -9,9 +9,17 @@
 
 ## Index <!-- omit in toc -->
 
+- [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
+- [Running the virtual server](#running-the-virtual-server)
 - [Technologies used](#technologies-used)
 - [Authors](#authors)
+
+## Prerequisites
+
+Need to install globally:
+
+- npm package manager
 
 ## Getting started
 
@@ -19,6 +27,14 @@ You only need to run npm to get all the necessary dependencies:
 
 ```
 npm install
+```
+
+## Running the virtual server
+
+To see the result of the project you can run:
+
+```
+npx webpack server
 ```
 
 ## Technologies used
