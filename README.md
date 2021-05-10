@@ -169,9 +169,9 @@ import "../img/elipse3.png";
 
 ## Deployment 📦
 
-Now we can build our aplication:
+Now we can build our application:
 
-Generating the /dist/bundle.js and de /dist/index.thml
+Generating the /dist/bundle.js and the /dist/index.thml
 
 ```
 npm run build
