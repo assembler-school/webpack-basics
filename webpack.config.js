@@ -18,6 +18,28 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
+    new ImageMinimizerPlugin({
+      minimizerOptions: {
+        // Lossless optimization with custom option
+        // Feel free to experiment with options for better result for you
+        plugins: [
+          "imagemin-gifsicle",
+          "imagemin-jpegtran",
+          "imagemin-optipng",
+          "imagemin-svgo",
+          [
+            "svgo",
+            {
+              plugins: [
+                {
+                  removeViewBox: false,
+                },
+              ],
+            },
+          ],
+        ],
+      },
+    }),
   ],
   module: {
     rules: [
@@ -39,6 +61,23 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset",
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          {
+            loader: "file-loader", // Or `url-loader` or your other loader
+          },
+          {
+            loader: ImageMinimizerPlugin.loader,
+            options: {
+              severityError: "warning", // Ignore errors on corrupted images
+              minimizerOptions: {
+                plugins: ["gifsicle"],
+              },
+            },
+          },
+        ],
       },
     ],
   },
