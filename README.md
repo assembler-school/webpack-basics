@@ -272,7 +272,7 @@ npm install -D babel-loader @babel/core @babel/preset-env webpack
   },
 ```
 
-# Sources:
+# Resources:
 
 https://webpack.js.org/plugins/html-webpack-plugin/
 
