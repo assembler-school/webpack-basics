@@ -2,8 +2,11 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { mainModule } = require("process");
 
 module.exports = {
+  mode: "development",
   entry: "./src/main.js",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -12,8 +15,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
 
       {
@@ -36,7 +39,7 @@ module.exports = {
       {
         test: /\.(jpe?g|gif|eot|ttf|png|svg|woff|woff2)$/i,
         // More information here https://webpack.js.org/guides/asset-modules/
-        type: "asset/resource",
+        type: "asset",
       },
 
       {
@@ -51,8 +54,7 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
           "css-loader",
           // Compiles Sass to CSS
@@ -61,14 +63,9 @@ module.exports = {
       },
 
       {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
+        test: /\.js/,
+        exclude: /node_modules/,
+        use: ["babel-loader"],
       },
     ],
   },
@@ -78,6 +75,9 @@ module.exports = {
     port: 9000,
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: "main.css",
+    }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
@@ -85,14 +85,6 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
     }),
-    new ImageMinimizerPlugin({
-      minimizerOptions: {
-        plugins: [
-          ["gifsicle", { interlaced: true }],
-          ["mozjpeg", { progressive: true }],
-          ["pngquant", { optimizationLevel: 5 }],
-        ],
-      },
-    }),
+    new ImageMinimizerPlugin({}),
   ],
 };
