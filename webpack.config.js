@@ -37,18 +37,6 @@ module.exports = {
           },
         },
       },
-
-      // {
-      //   test: /\.(png|jpg|svg)$/i,
-      //   use: [
-      //     {
-      //       loader: "url-loader",
-      //       options: {
-      //         limit: 12000,
-      //       },
-      //     },
-      //   ],
-      // },
     ],
   },
   plugins: [
