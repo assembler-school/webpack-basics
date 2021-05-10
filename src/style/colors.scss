@@ -1,0 +1,14 @@
+$myBlue: #5b5bff;
+$myGray: #5b5b63;
+$myNotGreen: #93c5ba;
+
+body {
+  padding: 25px;
+  text-align: center;
+  color: $myGray;
+  background-color: $myNotGreen;
+}
+
+#btn {
+  background-color: $myBlue;
+}
