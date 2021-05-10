@@ -59,3 +59,124 @@ To deliver this project you must follow the steps indicated in the document:
 
 - [WebPack Official](https://webpack.js.org/)
 - [ECMAScript 6 compatibility](https://kangax.github.io/compat-table/es6/)
+
+
+
+
+### To start this web write this command in the terminal
+
+````
+ npm install
+
+````
+ 
+### To transpile the project with webpack execute this:
+
+````
+npm run build
+
+````
+
+
+
+
+
+# Guidelines
+
+
+
+
+## Webpack basics
+Webpack is a management application that allows to develop your projects in modules.
+##### To install webpack:
+````
+npm install --save-dev webpack
+````
+Once you have webpack installed, you'll have to create this file : 
+
+### webpack.config.js
+
+The management of the modules in your project will be handled from this file.
+
+- Here you will create an object called <b>module.exports</b>
+- Within this object we specify to webpack which js files you want to compile:
+
+`````
+{
+  entry: "./src/js/main.js",
+  mode: "production",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+  },
+`````
+#### In 'entry' we define the index.js file where we import the javascript modules
+
+````
+import "./module-a.js";
+import "./module-b.js";
+````
+
+#### In 'output' we define where we want to export the bundled project
+````
+output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+  }
+````
+## Creating rules
+
+#### Webpack works by default with javascript files, in order to transpile other kind of files (as html, images, styles...) you will need to install certain external 'plugins' and add 'rules' 
+
+The <b>rules</b> are inserted in the object <b>modules</b> as well as <b>plugins</b>.There are both an array of objects, where each of those object are a rule (in the array of rules) and a plugin (in the array of plugins)
+
+
+### Creating rules and plugins
+
+
+- To manage the main HTML 
+  - To transpile HTML files you need to install an [external plugin](https://webpack.js.org/plugins/html-webpack-plugin/).
+  Webpack doesn't have this functionality by default 
+  - Once you have this plugin installed [write the rule](https://webpack.js.org/loaders/html-loader/)
+
+- To manage the styles you have to write a new [rule](https://webpack.js.org/loaders/sass-loader/)
+  this rule works in three ways:
+  - Creates `style` nodes from JS strings
+  ````
+  "style-loader"
+  ````
+  - Insert CSS styles to the main JS.
+   ````
+  "css-loader"
+  ````
+  - Compile CSS to SCSS.
+   ````
+  "style-loader"
+  ````
+
+
+- To manage images: 
+  - Assets modules, here you have [4 assets modules](https://webpack.js.org/guides/asset-modules/)
+  options; we use "assets"
+  - To run this asset you need to have included [HTML loader](https://webpack.js.org/loaders/html-loader/)
+
+
+- To compress the image we installed the plugin :
+  [ImageMinimizerPlugin](https://webpack.js.org/plugins/image-minimizer-webpack-plugin/).
+  Also we need to add to this plugin a filter to limit which images will be compressed depending of there size:
+  ````
+  filter: (source) => {
+          if (source.byteLength >= 8192) { // = 8kb limit
+            return true;
+          }
+
+          return false;
+        },
+  ````
+    
+- To manage the jQuery package you will need to install a plugin [click here](https://webpack.js.org/plugins/provide-plugin/)
+
+- In order to make our JS code backwards compatible to ECMAScript 5 we use [Babel](https://webpack.js.org/loaders/babel-loader/) transpiler.
+
+
+ 
