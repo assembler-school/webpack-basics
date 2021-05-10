@@ -21,12 +21,13 @@ class Point {
 }
 
 /*-------------------- Template Strings --------------------*/
-function templateStrings(){
+function templateStringsAndClassInstanceExample(expression){
+    let examplePoint = new Point(3,5);
+    console.log("examplePoint.toString() -->",examplePoint.toString());
     console.log(`string text`);
     console.log(`string text line 1
          string text line 2`);
-    // console.log(`string text ${expression} string text`);
-    // console.log(tag`string text ${expression} string text`); 
+    console.log(`string text ${expression} string text`);
 }
 
-templateStrings()
+templateStringsAndClassInstanceExample("is a")
