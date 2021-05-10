@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);
+body {
+  font-family: "Lobster", cursive;
+  font-size: 1rem;
+}
+
+body {
+  padding: 25px;
+  text-align: center;
+  color: #5b5b63;
+  background-color: #93c5ba;
+}
+
+#btn {
+  background-color: #5b5bff;
+}
+
+img[alt=Rob] {
+  height: 100px;
+}
+
+img[alt=Melody] {
+  height: 200px;
+}
+
+img[alt="Hola mundo Zombie"] {
+  height: 200px;
+}
+

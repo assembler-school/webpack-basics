@@ -1,0 +1,26 @@
+$myBlue: #5b5bff;
+$myGray: #5b5b63;
+$myNotGreen: #93c5ba;
+
+body {
+  padding: 25px;
+  text-align: center;
+  color: $myGray;
+  background-color: $myNotGreen;
+}
+
+#btn {
+  background-color: $myBlue;
+}
+
+img[alt="Rob"] {
+  height: 100px;
+}
+
+img[alt="Melody"] {
+  height: 200px;
+}
+
+img[alt="Hola mundo Zombie"] {
+  height: 200px;
+}
