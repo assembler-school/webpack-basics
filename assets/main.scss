@@ -1,3 +1,6 @@
+@use "./color" as color;
+@use "./text" as text;
+
 @mixin borders {
   border: 3px solid rgb(255, 255, 255);
 }
@@ -7,8 +10,8 @@ body {
   flex-direction: column;
   justify-content: center;
   background-color: rgb(17, 17, 17);
-  font-family: 'Spartan', sans-serif;
-  color: white;
+  font-family: text.$fontFamily;
+  color: text.$textColor;
 }
 .container {
   width: 100%;
@@ -25,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    background-color: white;
+    background-color: color.$containerColor;
     @include borders;
     .headCont {
       width: 100%;
@@ -65,7 +68,7 @@ body {
     border: none;
     border-radius: 5px;
     margin: 10px;
-    background-color: rgb(49, 87, 255);
+    background-color: color.$buttonColor;
   }
   code{
     width: 100%;
