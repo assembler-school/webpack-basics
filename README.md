@@ -92,7 +92,7 @@ module.exports = {
   	output: {
     	path: path.resolve(__dirname, "dist"),
     	filename: "bundle.js",
-  	},
+    },
 }
 ```
 -
@@ -102,10 +102,10 @@ We add a new plugin.
 
 ```
 plugins: [
-		new HtmlWebpackPlugin({
+	new HtmlWebpackPlugin({
      	template: "./src/index.html",
     	}),
-   	] 
+   ] 
 ```
 
 We add a new rule to catch the `.html` files and generate a new one.
@@ -113,12 +113,12 @@ We add a new rule to catch the `.html` files and generate a new one.
 ```
 module: {
 	rules: [
-				{
-        		test: /\.html$/i,
-        		loader: "html-loader",
-      			},
-    	]
-   	} 
+	{
+        test: /\.html$/i,
+        loader: "html-loader",
+      	},
+    ]
+ } 
 ```
 
 -
@@ -151,7 +151,7 @@ module.exports = {
          		 "sass-loader",
         		],
       		},
-   		],
+   	],
    }, 
 (…)
 }
@@ -189,7 +189,7 @@ module.exports = {
         	test: /\.(png|svg|jpg|jpeg|gif)$/i,
         	type: "asset",
       		},
-		],
+	],
    }, 
 (…)
 }
@@ -207,13 +207,13 @@ npm i -D image-minimizer-webpack-plugin
 
 We'll need also *sub-plugins* that are going to be called depending on the type of image we need to compress. These *sub-plugins* in particular are **lossy**, which means that compress images as much as possible, in contrast to the **lossless** ones.
 
-```
+```bash
 npm i -D imagemin-gifsicle imagemin-mozjpeg imagemin-pngquant imagemin-svgo
 ```
 
 Then, once all our image dependencies have been properly installed, we will need to use them in our `webpack.config.js` file once again. In this case, we are declaring a new plugin so we need to place it inside the array of plugins:
 
-```
+```javascript
 // webpack.config.json
 
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
@@ -252,7 +252,7 @@ After this, we will just need to import all of the assets we are going to use in
 
 We add a new plugin
 
-```
+```javascript
 new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery'
@@ -271,7 +271,7 @@ We create four `.js` documents.  `index.js`,  `main.js`,  `module-a.js` and  `mo
 
  `module-a.js` We have to use arrow function, class construnctor, let and const elements
 
-```
+```javascript
 const myBtn = document.getElementById("clickBtn2");
 
 
@@ -297,7 +297,7 @@ const player = new Players("Figo", 10);
 console.log(player.name)
 ```
  
- `module-b.js` We just have to use jquery in an easy example
+`module-b.js` We just have to use jquery in an easy example
  
 ```
 $("#clickBtn").on("click", function(){
@@ -349,6 +349,7 @@ Add some rules to run babel to compiler our  **ES6** to **ES5**
               }
             }
           },
+}
 ```        
 
 -
@@ -371,8 +372,6 @@ import "./img/smallSvg.svg";
 
 // JavaScript
 import "./main.js";
-
-
 ```
 
 -
