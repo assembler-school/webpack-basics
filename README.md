@@ -2,24 +2,24 @@
 
 # Webpack pill: Steps
 
-## 1 Installing Webpack and webpack-dev-server
+## 1. Installing Webpack and webpack-dev-server
 
 ```
 npm install -g webpack webpack-cli
 npm install webpack-dev-server
 ```
 
-## 2 Forking and cloning root repository
+## 2. Forking and cloning root repository
 
 From Assembler https://github.com/assembler-school/webpack-basics
 
-## 3 Initializing project and creating package.json
+## 3. Initializing project and creating package.json
 
 ```
 npm init -y
 ```
 
-## 4 Building src folder
+## 4. Building src folder
 
 a) Creating main.js, our entrypoint.
 
@@ -40,7 +40,7 @@ import "./module-b.js";
 import "./main.scss";
 ```
 
-## 5 Initializing our webpack.config.js
+## 5. Initializing our webpack.config.js
 
 ```
 
@@ -54,7 +54,7 @@ module.exports = {
 };
 ```
 
-## 6 Installing HtmlWebpackPlugin and jQuery
+## 6. Installing HtmlWebpackPlugin and jQuery
 
 Installing HtmlWebpackPlugin and adding it as plugin on our webpack.config.js
 
@@ -75,7 +75,7 @@ npm install --save-dev html-webpack-plugin
   ]
 ```
 
-## 7 Installing SASS loader
+## 7. Installing SASS loader
 
 ```
 npm install sass-loader sass webpack --save-dev
@@ -100,7 +100,7 @@ npm install sass-loader sass webpack --save-dev
   },
 ```
 
-## 8 Compiling our webpack and checking results
+## 8. Compiling our webpack and checking results
 
 ```
 npm run build
@@ -108,7 +108,7 @@ npm run build
 
 Then, we get a new folder called "dist", which contain our ouput bundle.js and index.html, opening index.html we should be able to see our modifications by JS and SASS.
 
-## 9 Managing images with webpack
+## 9. Managing images with webpack
 
 ### 9.1 Importing images into our entry point
 
@@ -239,8 +239,22 @@ new ImageMinimizerPlugin({
 
 ```
 
-## 10 Compiling our webpack and checking results
+## 10. Compiling our webpack and checking results
 
 ```
 npm run build
 ```
+
+# Sources:
+
+https://webpack.js.org/plugins/html-webpack-plugin/
+
+https://webpack.js.org/loaders/sass-loader/
+
+https://webpack.js.org/loaders/html-loader/
+
+https://webpack.js.org/guides/asset-management/
+
+https://www.npmjs.com/package/image-minimizer-webpack-plugin
+
+https://webpack.js.org/loaders/babel-loader/
