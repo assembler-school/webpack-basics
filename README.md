@@ -196,8 +196,8 @@ npm start
 
 ## Autors ✒️
 
-* **Ethan Alfaro** - *Trabajo en equipo* - [Ethan Alfaro Github](https://github.com/Ethan-Alfaro)
-* **Hayk Petrosyan** - *Trabajo en equipo* - [Hayk Petrosyan Github](https://github.com/haykbit)
+👨‍💻 **Ethan Alfaro** - *Trabajo en equipo* - [Ethan Alfaro Github](https://github.com/Ethan-Alfaro)
+👨‍💻 **Hayk Petrosyan** - *Trabajo en equipo* - [Hayk Petrosyan Github](https://github.com/haykbit)
 
 ## Resources 📎
 
