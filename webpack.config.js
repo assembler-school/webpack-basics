@@ -1,6 +1,8 @@
 const webpack = require("webpack");
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+// const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
     entry: './src/index.js',
@@ -15,7 +17,29 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html'
-        })
+        }),
+        // new CompressionPlugin()
+        new ImageMinimizerPlugin({
+          filter: (source) => {
+            // The `source` argument is a `Buffer` of source file
+            // The `sourcePath` argument is an absolute path to source
+            if (source.byteLength < 8192) {
+              return false;
+            }
+    
+            return true;
+          },
+          minimizerOptions: {
+            // Lossless optimization with custom option
+            // Feel free to experiment with options for better result for you
+            plugins: [
+              'imagemin-gifsicle',
+              'imagemin-mozjpeg',
+              'imagemin-pngquant',
+              'imagemin-svgo'
+            ],
+          },
+        }),
     ],
     module: {
         rules: [
@@ -26,6 +50,20 @@ module.exports = {
           {
             test: /\.s[ac]ss$/i,
             use: ["style-loader", "css-loader","sass-loader",],
+          },
+          {
+            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            type: 'asset',
+          },
+          {
+            test: /\.m?js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env']
+              }
+            }
           }
         ],
     },
