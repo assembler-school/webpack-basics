@@ -15,15 +15,14 @@
 - [Intro](#intro)
 - [Requirements](#requirements)
 - [Setting webpack.config.js](#setting-webpack)
-  * Installing and running webpack 
-  * Entry point and output
+  * [Installing and running webpack](#Installing-and-running-webpack) 
+  * [Entry point and output](#Entry-point-and-output)
  	* [HTML](#HTML)
  	* [CSS/SASS](#css/sass)
  	* [Loading images](#Loading-images)
 	* [jQuery](#jquery)
   * [Babel](#Babel)
-  * [index.js](#index.js)
-	
+  * [index.js](#index.js)	
 - [Technologies used](#technologies-used)
 - [Resources](#resources)
 - [Collaborators](#collaborators)
@@ -249,7 +248,6 @@ module.exports = {
 After this, we will just need to import all of the assets we are going to use in our project inside the `index.js` file to be able to compile them.
 
 
--
 ### jQuery
 
 We add a new plugin
@@ -259,9 +257,6 @@ new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery'
     }),
-    
-  
-
 ```
 
 We add a new const to develop this. Whith this declaration we don´t need a script with `jquery` file in our `index.html` document
