@@ -5,6 +5,9 @@
     "url-loader": "^4.1.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
     "html-webpack-plugin": "^5.3.1",
     "jquery": "^3.6.0",
@@ -34,5 +37,10 @@
   "bugs": {
     "url": "https://github.com/orionalfa/webpack-basics/issues"
   },
-  "homepage": "https://github.com/orionalfa/webpack-basics#readme"
+  "homepage": "https://github.com/orionalfa/webpack-basics#readme",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
 }

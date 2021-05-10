@@ -9,7 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
   },
-  mode: "development",
+  mode: "production",
     module: {
       rules: [
         {
@@ -17,9 +17,21 @@ module.exports = {
           use: [MiniCSSExtractPlugin.loader, "css-loader", "sass-loader"],
         },
         {
-          test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-          use: "url-loader?limit=8",
+          test: /\.(png|jpg|gif|svg)$/i,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 8192,
+              },
+            },
+          ],
         },
+        {
+          test: /\.(js)$/,
+          exclude: /node_modules/,
+          use: ['babel-loader']
+        }
       ],
     },
     plugins: [

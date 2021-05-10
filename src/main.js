@@ -1,9 +1,6 @@
 import * as moduleB from "./module-b.js";
+import ClassA from "./module-a";
 
-const btn = document.getElementById("btn");
-btn.addEventListener("click", (_) => {
-  alert("asdsad");
-  btn.className = "top";
-});
-
-moduleB.initBtnClick();
+let cA = new ClassA();
+cA.initA();
+moduleB.initB();
