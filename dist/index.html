@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>My Webpack example</title>
-<script defer src="main.js?afcb37efa9e1b29256c5"></script><link href="main.css?afcb37efa9e1b29256c5" rel="stylesheet"></head>
-<body>
+  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
     <div class="content">
-        <img src="assets/img/lessThan8.png" alt="">
-        <img src="assets/img/lessThan8.svg" alt="">
-        <img src="assets/img/greaterThan12.png" alt="">
-        <img src="assets/img/greaterThan1mb.jpg" alt="">
+        <div>PNG Less than 8 kb<img src="../assets/img/lessThan8.png" alt=""></div>
+        <div>SVG Less than 8 kb<img src="../assets/img/lessThan8.svg" alt=""></div>
+        <div>PNG Greater than 12 kb<img src="../assets/img/greaterThan12.png" alt=""></div>
+        <div>JPG Greater than 1 mb<img src="../assets/img/greaterThan1mb.jpg" alt=""></div>
     </div>
     <div class="content bottom">
-        <button>Toggle tomato color</button>
-        <button id="btn">Show alert with JQuery</button>
+        <button id="toggleBtn" class="cool-text">Toggle tomato color</button>
+        <button class="cool-text" id="btn">Show alert with JQuery</button>
     </div>
-</body>
+  </body>
 </html>
