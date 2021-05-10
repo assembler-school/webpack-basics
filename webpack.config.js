@@ -18,7 +18,11 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset'
+                type: 'asset',
+                parser: {
+                    dataUrlCondition:
+                    {maxSize: 2000 * 1024}
+                }
             },
             {
                 test: /\.s[ac]ss$/i,
