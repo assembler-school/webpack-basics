@@ -5,7 +5,7 @@ var webpack = require("webpack");
 
 module.exports = {
   mode: "development",
-  entry: "./src/main.js",
+  entry: "./src/app/main.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -16,7 +16,7 @@ module.exports = {
       jQuery: "jquery",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/public/index.html",
     }),
     new ImageMinimizerPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,

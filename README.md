@@ -46,7 +46,7 @@ import "./main.scss";
 
 module.exports = {
   mode: "development",
-  entry: "./src/main.js",
+  entry: "./src/app/main.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -70,7 +70,7 @@ npm install --save-dev html-webpack-plugin
       jQuery: "jquery",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/public/index.html",
     }),
   ]
 ```
@@ -243,6 +243,33 @@ new ImageMinimizerPlugin({
 
 ```
 npm run build
+```
+
+## 11. ECMAScript transformation
+
+In order to be able to make the transformation from ECMAScript 5 to ECMAScript 6, we use babel loader:
+
+```
+npm install -D babel-loader @babel/core @babel/preset-env webpack
+```
+
+```
+// webpack.config.js
+  module: {
+    rules: [
+      ...
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+    ],
+  },
 ```
 
 # Sources:
