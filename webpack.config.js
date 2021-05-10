@@ -59,8 +59,8 @@ module.exports = {
         // Feel free to experiment with options for better result for you
         plugins: [
           ["gifsicle", { interlaced: true }],
-          ["mozjpeg ", { progressive: true }],
-          ["pngquant ", { optimizationLevel: 5 }],
+          ["mozjpeg", { progressive: true }],
+          ["pngquant", { optimizationLevel: 5 }],
           [
             "svgo",
             {
