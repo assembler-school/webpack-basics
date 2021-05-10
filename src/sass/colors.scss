@@ -2,3 +2,17 @@ $body-color: red;
 body {
   background-color: $body-color;
 }
+.images{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+.gridImage{
+  width: 100%;
+}
+.highImage{
+  width:100%; 
+  grid-column-start: 2;
+  grid-column-end:3 ;
+
+}
