@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
   entry: "./src/main.js",
@@ -13,12 +14,6 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
-      },
-
-      {
-        test: /\.(jpe?g|gif|eot|ttf|woff|woff2)$/i,
-        // More information here https://webpack.js.org/guides/asset-modules/
-        type: "asset/resource",
       },
 
       {
@@ -36,6 +31,12 @@ module.exports = {
             maxSize: 12 * 1024,
           },
         },
+      },
+
+      {
+        test: /\.(jpe?g|gif|eot|ttf|png|svg|woff|woff2)$/i,
+        // More information here https://webpack.js.org/guides/asset-modules/
+        type: "asset/resource",
       },
 
       {
@@ -58,6 +59,17 @@ module.exports = {
           "sass-loader",
         ],
       },
+
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
     ],
   },
   devServer: {
@@ -72,6 +84,15 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
+    }),
+    new ImageMinimizerPlugin({
+      minimizerOptions: {
+        plugins: [
+          ["gifsicle", { interlaced: true }],
+          ["mozjpeg", { progressive: true }],
+          ["pngquant", { optimizationLevel: 5 }],
+        ],
+      },
     }),
   ],
 };
