@@ -63,5 +63,25 @@ To deliver this project you must follow the steps indicated in the document:
 
 ## Installation Process
 
-This section is meant to explain step by step the process followed to install webpack and the specific plugins used for this project:
+This section is meant to explain the process followed to install webpack and the specific plugins used for this project.
+
+ - First the project directory and folder structure must be created, where we will install webpack locally on the command line (or, in this case we install it globally to have it on a wider scope for other projects)
+
+ ````
+  npm install -g webpack webpack-cli
+ ````
+
+ - Configuration file creation? (webpack.config.js)
+
+ ## Configuration
+
+ - Entry file
+ 
+ - Installing plugins & loader rules & file import. For different extensions/functionalities
+
+ ## Running?
+
+ - Creation of /dist file (& bundle)
+
+ - Run build
 
