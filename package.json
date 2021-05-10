@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/Nachomontoya/webpack-basics#readme",
   "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
     "image-minimizer-webpack-plugin": "^2.2.0",
     "imagemin-gifsicle": "^7.0.0",
