@@ -1,7 +1,7 @@
 import "../index.html";
-import "../../assets/main.scss";
 import './module-a.js';
 import './module-b.js';
+import "../../assets/main.scss";
 import "../img/background-image.jpg";
 import "../img/elipse.png";
 import "../img/elipse2.svg";
