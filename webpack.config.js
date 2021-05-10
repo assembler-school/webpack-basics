@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
   entry: "./src/js/main.js",
@@ -17,27 +18,22 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpg|svg)$/i,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              limit: 12000,
-              // fallback: require.resolve("image-webpack-loader"),
-            },
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 12 * 1024,
           },
-        ],
+        },
       },
 
       // {
-      //   test: /\.(png|jpe?g|gif)$/i,
+      //   test: /\.(png|jpg|svg)$/i,
       //   use: [
-      //     "file-loader",
       //     {
-      //       loader: "image-webpack-loader",
+      //       loader: "url-loader",
       //       options: {
-      //         bypassOnDebug: true,
-      //         disable: true,
+      //         limit: 12000,
       //       },
       //     },
       //   ],
@@ -51,6 +47,32 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
+    }),
+    new ImageMinimizerPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      filter: (source) => {
+        if (source.byteLength > 12288) {
+          return true;
+        }
+        return false;
+      },
+      minimizerOptions: {
+        plugins: [
+          ["gifsicle", { interlaced: true }],
+          ["mozjpeg", { progressive: true }],
+          ["pngquant", { optimizationLevel: 5 }],
+          [
+            "svgo",
+            {
+              plugins: [
+                {
+                  removeViewBox: false,
+                },
+              ],
+            },
+          ],
+        ],
+      },
     }),
   ],
 };
