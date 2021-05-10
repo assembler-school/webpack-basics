@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack"); //to access built-in plugins
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-//const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   entry: "./src/js/main.js",
@@ -17,13 +16,13 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
-      
+
       {
         test: /\.s[ac]ss$/i,
         use: [
@@ -45,22 +44,14 @@ module.exports = {
       },
       /*  {
         test: /\.(svg)$/i,
-        type: "asset/inline",
+        type: "asset",
         parser: {
           dataUrlCondition: {
             maxSize: 8 * 1024, // 8kb
           },
         },
       },
-      {
-        test: /\.(svg)$/i,
-        type: "asset/resource",
-        parser: {
-          dataUrlCondition: {
-            minSize: 8 * 1024, // 4kb
-          },
-        },
-      }, */
+      */
     ],
   },
   plugins: [
@@ -81,8 +72,6 @@ module.exports = {
         return false;
       },
       minimizerOptions: {
-        // Lossless optimization with custom option
-        // Feel free to experiment with options for better result for you
         plugins: [
           "imagemin-mozjpeg",
           "imagemin-pngquant",

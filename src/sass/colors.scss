@@ -1,18 +1,28 @@
 $body-color: red;
 body {
   background-color: $body-color;
+  transition: 1s background-color;
 }
-.images{
+#addText {
+  transition: 1s background-color;
+  background-color: yellow;
+}
+.images {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
 }
-.gridImage{
+.gridImage {
   width: 100%;
 }
-.highImage{
-  width:100%; 
+.highImage {
+  width: 100%;
   grid-column-start: 2;
-  grid-column-end:3 ;
+  grid-column-end: 4;
+}
 
+.redBack {
+  background-color: red !important;
+}
+.yellowBack {
+  background-color: yellow;
 }

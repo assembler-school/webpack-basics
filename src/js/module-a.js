@@ -24,11 +24,11 @@ class Polygon {
   // Simple class instance methods using short-hand method
   // declaration
   sayName() {
-    ChromeSamples.log("Hi, I am a ", this.name + ".");
+    console.log("Hi, I am a ", this.name + ".");
   }
 
   sayHistory() {
-    ChromeSamples.log(
+    console.log(
       '"Polygon" is derived from the Greek polus (many) ' + "and gonia (angle)."
     );
   }
@@ -37,3 +37,16 @@ class Polygon {
 var testText = (text) => {
   console.log(`${text} this is in between texts ${text}`);
 };
+
+const rectangulo = new Polygon(100, 200);
+document.getElementById(
+  "addText"
+).textContent = `Este ${rectangulo.name} tiene una altura de
+${rectangulo.height} y un ancho de ${rectangulo.width}`;
+document.getElementById("addText").style.height = `${rectangulo.height}px`;
+document.getElementById("addText").style.width = `${rectangulo.width}px`;
+document.getElementById("btn2").addEventListener("click", () => {
+  testText("LALALA");
+  document.querySelector("body").classList.toggle("yellowBack");
+  document.querySelector("#addText").classList.toggle("redBack");
+});
