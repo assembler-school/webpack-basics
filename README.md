@@ -8,11 +8,24 @@
 
 ## Index <!-- omit in toc -->
 
+- [Getting Start](#getting-start)
 - [Requirements](#requirements)
 - [Repository](#repository)
 - [Technologies used](#technologies-used)
 - [Project delivery](#project-delivery)
 - [Resources](#resources)
+
+## Getting Start
+
+To inicialize the project, you must run:
+
+>npm install
+
+All dependencies will install in the project, so you can compile the code runinng:
+
+>npm run build
+
+This command will create a folder **dist** where you will have the main index.html with all assets linked.
 
 ## Requirements
 
@@ -53,15 +66,3 @@ To deliver this project you must follow the steps indicated in the document:
 
 - [WebPack Official](https://webpack.js.org/)
 - [ECMAScript 6 compatibility](https://kangax.github.io/compat-table/es6/)
-
-## Getting Start
-
-To inicialize the project, you must run:
-
->npm install
-
-All dependencies will install in the project, so you can compile the code runinng:
-
->npm run build
-
-This command will create a folder **dist** where you will have the main index.html with all assets linked.
