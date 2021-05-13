@@ -19,7 +19,7 @@
 - [Resources](#resources)
 - [Installation Process](#installation-process)
 - [Configuration](#configuration)
-- [Running?](#running)
+- [Get it working](#get-it-working)
 
 ## Requirements
 
@@ -103,7 +103,7 @@ This section is meant to explain the process followed to install webpack and the
         npm install imagemin-gifsicle imagemin-mozjpeg imagemin-pngquant imagemin-svgo --save-dev
         ````
 
-   - Rules:
+   - Loaders, plugins and modules:
 
       1. **html-loader** to load html code for the _index.html_ file in the _dist_ folder. 
 
@@ -124,7 +124,8 @@ This section is meant to explain the process followed to install webpack and the
 
         ````
         {
-        	test: 
+        	test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset',
         }
         ````
 
@@ -139,13 +140,23 @@ This section is meant to explain the process followed to install webpack and the
 
  ## Configuration
 
- - Entry file
+ - Entry and output: 
+    Webpack needs an entry point, that will serve as the base to begin building its dependencies related to the other modules. The default entry file is ````index.js````. 
+    The output property sets the place where the bundle created by webpack will be emitted to.
 
- - Installing plugins & loader rules & file import. For different extensions/functionalities
+ ````
+ module.exports = {
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+    }
 
- ## Running?
+ ````
 
- - Creation of /dist file (& bundle)
+ ## Get it working
 
- - Run build
+ - After the webpack is properly set up, you can run ````npm run build```` to compile it. It will create (by default) the ````./dist```` `folder with ````bundle.js```` among other files.
+
+ - You can also use the ````webpack-dev-server````, that provides you with a web server with live reloading so you don't have to manually compile the code every time you make changes.
 
