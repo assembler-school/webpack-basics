@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog with API</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <!-- Custom Styles -->
+    <!--    <link
+          rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="assets/css/styles.css"
+        /> -->
+  </head>
+  <body>
+    <header>
+        <section class="row navBar">
+            <div class="col navBar__logo">
+              <img src="assets\images\logo.png" alt="Instagram" />
+            </div>
+            <div class="col navBar__searchBar">
+              <form>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="search"
+                    aria-describedby="Search something"
+                    placeholder="Search"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="col navBar__icons">
+                <div class="row">
+                    <div class="col navBar__icons__home">
+                        <i class="bi bi-house-door"></i>
+                    </div>
+                    <div class="col navBar__icons__inbox">
+                        <i class="bi bi-cursor"></i>
+                    </div>
+                    <div class="col navBar__icons__explore">
+                        <i class="bi bi-compass"></i>
+                     </div>
+                     <div class="col navBar__icons__activity">
+                        <i class="bi bi-heart"></i>
+                     </div>
+                     <div class="col navBar__icons__account">
+                        <i class="bi bi-person-circle"></i>
+                     </div>
+                </div>               
+              </div>
+            </div>
+          </section>
+    </header>
+    <main  class="row">
+            <!-----------------------  POSTS ----------------------->            
+            <div class="col posts">
+                <!-----------------------  POST 1 ----------------------->
+                <article class="row posts__one">
+                    <!-----------------------  POST HEADER -----------------------> 
+                    <div class="row posts__one__header">
+                        <div class="col postUser__img">
+                            <img src="" alt="postUserPhoto">
+                        </div>
+                        <div class="col postUser__name">
+                                <p>PostUserName</p>
+                        </div>
+                        <div class="col userData__more">
+                            <a href="">...</a>
+                        </div>
+                    </div>   
+                    <!-----------------------  POST HEADER END ----------------------->    
+
+                    <!-----------------------  POST CAROUSEL ----------------------->           
+                    <div
+                        id="posts__one__carousel"
+                        class="row carousel slide"
+                        data-ride="carousel"
+                        >
+                        <div class="carousel">
+                            <div class="carousel__item active">
+                                <img
+                                class="d-block w-100"
+                                src="assets\images\posts__one__1.png"
+                                alt="First slide"
+                                />
+                            </div>
+                            <div class="carousel__item">
+                                <img
+                                class="d-block w-100"
+                                src="assets\images\posts__one__2.png"
+                                alt="Second slide"
+                                />
+                            </div>
+                            <div class="carousel__item">
+                                <img
+                                class="d-block w-100"
+                                src="assets\images\posts__one__3.png"
+                                alt="Third slide"
+                                />
+                            </div>
+                        </div>
+                        <div class="row carousel__bar">
+                            <div class="col carousel__bar__icons">
+                                <div class="row">
+                                    <div class="col carousel__bar__icons__activity">
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <div class="col carousel__bar__icons__comment">
+                                        <i class="bi bi-chat"></i>
+                                    </div>
+                                    <div class="col carousel__bar__icons__inbox">
+                                        <i class="bi bi-cursor"></i>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col carousel__bar__indicators">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#posts__one__carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#posts__one__carousel" data-slide-to="1"></li>
+                                    <li data-target="#posts__one__carousel" data-slide-to="2"></li>
+                                </ol>
+                                <a class="carousel-control-prev" href="#posts__one__carousel" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#posts__one__carousel" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>  
+                            </div>
+                            <div class="col carousel__bar__marker">
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                        <div class="row carousel__likes">
+                            <p>987.654.321 Likes</p>
+                        </div>
+                    </div>  
+                     <!-----------------------  POST CAROUSEL END ----------------------->
+                     
+                     <!-----------------------  POST COMMENTS ----------------------->   
+                    <div class="row posts__one__comments">
+                        <div class="row posts__one__comments-1">
+                            <div class="row posts__one__comments-1__userName">
+                                <p>UserName</p>
+                            </div>
+                            <div class="row posts__one__comments-1__text">
+                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+                                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            </div>
+                        </div>
+                        <div class="row posts__one__time">
+                            14 DAYS AGO
+                        </div>
+                    </div>
+                    <!-----------------------  POST COMMENTS END ----------------------->
+                </article>
+                <!-----------------------  POST 1 END ----------------------->
+
+                <!-----------------------  POST 2 ----------------------->
+                <article class="row posts__two">
+                    <!-----------------------  POST HEADER -----------------------> 
+                    <div class="row posts__two__header">
+                        <div class="col postUser__img">
+                            <img src="" alt="postUserPhoto">
+                        </div>
+                        <div class="col postUser__name">
+                                <p>PostUserName</p>
+                        </div>
+                        <div class="col userData__more">
+                            <a href="">...</a>
+                        </div>
+                    </div>   
+                    <!-----------------------  POST HEADER END ----------------------->    
+
+                    <!-----------------------  POST CAROUSEL ----------------------->           
+                    <div
+                        id="posts__two__carousel"
+                        class="row carousel slide"
+                        data-ride="carousel"
+                        >
+                        <div class="carousel">
+                            <div class="carousel__item active">
+                                <img
+                                class="d-block w-100"
+                                src="assets\images\posts__two__1.png"
+                                alt="First slide"
+                                />
+                            </div>
+                            <div class="carousel__item">
+                                <img
+                                class="d-block w-100"
+                                src="assets\images\posts__two__2.png"
+                                alt="Second slide"
+                                />
+                            </div>
+                            <div class="carousel__item">
+                                <img
+                                class="d-block w-100"
+                                src="assets\images\posts__two__3.png"
+                                alt="Third slide"
+                                />
+                            </div>
+                        </div>
+                        <div class="row carousel__bar">
+                            <div class="col carousel__bar__icons">
+                                <div class="row">
+                                    <div class="col carousel__bar__icons__activity">
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <div class="col carousel__bar__icons__comment">
+                                        <i class="bi bi-chat"></i>
+                                    </div>
+                                    <div class="col carousel__bar__icons__inbox">
+                                        <i class="bi bi-cursor"></i>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col carousel__bar__indicators">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#posts__two__carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#posts__two__carousel" data-slide-to="1"></li>
+                                    <li data-target="#posts__two__carousel" data-slide-to="2"></li>
+                                </ol>
+                                <a class="carousel-control-prev" href="#posts__two__carousel" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#posts__two__carousel" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>  
+                            </div>
+                            <div class="col carousel__bar__marker">
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                        <div class="row carousel__likes">
+                            <p>987.654.321 Likes</p>
+                        </div>
+                    </div>  
+                     <!-----------------------  POST CAROUSEL END ----------------------->
+                     
+                     <!-----------------------  POST COMMENTS ----------------------->   
+                    <div class="row posts__two__comments">
+                        <div class="row posts__two__comments-1">
+                            <div class="row posts__two__comments-1__userName">
+                                <p>UserName1</p>
+                            </div>
+                            <div class="row posts__two__comments-1__text">
+                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+                                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            </div>
+                        </div>
+                        <div class="row posts__two__comments-2">
+                            <div class="row posts__two__comments-2__userName">
+                                <p>UserName2</p>
+                            </div>
+                            <div class="row posts__two__comments-2__text">
+                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+                                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            </div>
+                        </div>
+                        <div class="row posts__two__time">
+                            28 DAYS AGO
+                        </div>
+                    </div>
+                    <!-----------------------  POST COMMENTS END ----------------------->
+                </article>
+                <!-----------------------  POST 2 END ----------------------->
+            </div>
+            <!-----------------------  POSTS END----------------------->  
+
+            <!-----------------------  SIDE BAR ----------------------->
+            <aside class="col sideBar">
+                <!-----------------------  HEADER ----------------------->
+                <div class=" sideBar__header">
+                    <div class="row userData">
+                        <div class="col userData__img">
+                            <img src="" alt="userPhoto">
+                        </div>
+                        <div class="col userData__names">
+                            <div class="row userData__names__userName">
+                                <p>UserName</p>
+                            </div>
+                            <div class="row userData__names__fullName">
+                                <p>Full User Name</p>
+                            </div>
+                        </div>
+                        <div class="col userData__change">
+                            <a href="">Change</a>
+                        </div>
+                    </div>
+                </div>
+                <!-----------------------  HEADER END ----------------------->
+
+                <!-----------------------  SUGGESTIONS ----------------------->
+                <div class="row sideBar__suggestions">
+                    <div class="col sideBar__suggestions__text">                   
+                            <p>Suggested for you</p>                   
+                    </div>
+                    <div class="col sideBar__suggestions__viewAll">
+                        <a href="">View all</a>
+                    </div>
+                    <div class="row sideBar__suggestions__suggested1">
+                        <div class="col suggestions__suggested1__img">
+                            <img src="" alt="suggested1Photo">
+                        </div>
+                        <div class="col suggestions__suggested1__names">
+                            <div class="row suggestions__suggested1__names__userName">
+                                <p>Suggested1UserName</p>
+                            </div>
+                            <div class="row suggestions__suggested1__names__fullName">
+                                <p>Suggested Full User Name </p>
+                            </div>
+                        </div>
+                        <div class="col suggestions__suggested1__change">
+                            <a href="">Follow</a>
+                        </div>
+                    </div>
+                    <div class="row sideBar__suggestions__suggested2">
+                        <div class="col suggestions__suggested2__img">
+                            <img src="" alt="suggested2Photo">
+                        </div>
+                        <div class="col suggestions__suggested2__names">
+                            <div class="row suggestions__suggested2__names__userName">
+                                <p>Suggested2UserName</p>
+                            </div>
+                            <div class="row suggestions__suggested2__names__fullName">
+                                <p>Suggested Full User Name </p>
+                            </div>
+                        </div>
+                        <div class="col suggestions__suggested2__change">
+                            <a href="">Follow</a>
+                        </div>
+                    </div>
+                    <div class="row sideBar__suggestions__suggested3">
+                        <div class="col suggestions__suggested3__img">
+                            <img src="" alt="suggested3Photo">
+                        </div>
+                        <div class="col suggestions__suggested3__names">
+                            <div class="row suggestions__suggested3__names__userName">
+                                <p>Suggested3UserName</p>
+                            </div>
+                            <div class="row suggestions__suggested3__names__fullName">
+                                <p>Suggested Full User Name </p>
+                            </div>
+                        </div>
+                        <div class="col suggestions__suggested3__change">
+                            <a href="">Follow</a>
+                        </div>
+                    </div>   
+                </div>
+                <!-----------------------  SUGGESTIONS END ----------------------->
+
+                <!-----------------------  LINKS ----------------------->
+                <div class="row sideBar__links">
+                    <div class="col">
+                        <a href="https://about.instagram.com/">about·</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://about.instagram.com/">about·</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://about.instagram.com/">about·</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://about.instagram.com/">about·</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://about.instagram.com/">about·</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://about.instagram.com/">about·</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://about.instagram.com/">about·</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://about.instagram.com/">about·</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://about.instagram.com/">about</a>
+                    </div>
+                </div>
+                <!-----------------------  LINKS END ----------------------->
+
+                <!-----------------------  COPYRIGHT ----------------------->
+                <div class="row sideBar__copyright">
+                <p>© 2021 INSTASSEMBLER FROM FAKEBOOK</p>
+                </div>
+                <!-----------------------  COPYRIGHT END----------------------->
+            </aside>
+            <!-----------------------  SIDE BAR END -----------------------> 
+    </main>
+    <footer></footer>
+  </body>
+</html>
