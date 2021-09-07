@@ -1,11 +1,12 @@
 const path = require("path");
-//const webpack = require("webpack");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
 
   devServer: {
-    historyApiFallBack: true,
+    historyApiFallback: true,
     port: 4000,
     open: true,
     compress: true,
@@ -13,11 +14,23 @@ module.exports = {
   },
 
   entry: {
-    main: path.resolve(__dirname, ".src/js/main.js"),
+    main: path.resolve(__dirname, "./src/js/main.js"),
   },
 
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "[name].bundle.js",
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Webpack Workshop Test",
+
+      template: path.resolve(__dirname, "./index.html"),
+
+      filename: "index.html",
+    }),
+
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };
