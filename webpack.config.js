@@ -33,4 +33,17 @@ module.exports = {
 
     new webpack.HotModuleReplacementPlugin(),
   ],
+
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(scss|css)$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+    ],
+  },
 };
