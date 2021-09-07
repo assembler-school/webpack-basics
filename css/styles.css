@@ -1,0 +1,40 @@
+/* navBar */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 20%;
+  max-height: 53px;
+  border-bottom: 1px solid grey;
+}
+
+.navBar__logo {
+  max-width: 103px;
+}
+.navBar__logo img {
+  max-width: 103px;
+}
+
+.navBar__searchBar {
+  max-width: 215px;
+}
+.navBar__searchBar input {
+  text-align: center;
+  font-family: FontAwesome;
+  height: 28px;
+}
+
+.navBar__icons {
+  max-width: 250px;
+  text-align: end;
+}
+.navBar__icons i {
+  font-size: 25px;
+  text-align: right;
+}
+
+/* navBar */
+/* BASE */
+/* COMPONENTS */
+/* LAYOUT */
+/* PAGES */
+/* main *//*# sourceMappingURL=styles.css.map */

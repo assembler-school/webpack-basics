@@ -1,15 +1,14 @@
+/* ABSTRACTS */
+@use './abstracts/tools';
+
 /* BASE */
-@use "base/reset";
+@use './base/reset';
 
 /* COMPONENTS */
-@use "components/buttons";
-@use "components/carousel";
-@use "components/forms";
+@use './components/components';
 
 /* LAYOUT */
-@use "layout/footer";;
-@use "layout/sidebar";
+@use './layout/layouts';
 
 /* PAGES */
-@use "pages/home";
-@use "pages/login";
+@use './pages/pages';

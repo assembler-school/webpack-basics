@@ -5,14 +5,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Blog with API</title>
-		<!-- Google Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
+		<title>InstAssembler</title>
+
 		<!-- Bootstrap CSS -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -39,23 +33,20 @@
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
 		/>
 		<!-- Custom Styles -->
-		<link
-			rel="stylesheet"
-			type="text/css"
-			media="screen"
-			href="assets/css/styles.css"
-		/>
+		<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 	</head>
 	<body>
 		<main>
 			<div class="container mx-auto">
-				<div class="row">
-					<div class="col">
-						<section class="content-right">
+				<div class="container__row">
+					<div class="row__col">
+						<!-----------------------  CAROUSEL ----------------------->
+						<section class="col__content-left">
 							<div
 								id="carouselLogin"
 								class="carousel slide"
-								data-ride="carousel"
+								data-bs-ride="carousel"
+								data-bs-interval="10000"
 							>
 								<div class="carousel-inner">
 									<div class="carousel-item active">
@@ -82,78 +73,92 @@
 								</div>
 							</div>
 						</section>
-					</div>
+						<!-----------------------  CAROUSEL END ----------------------->
+						<div class="col__content-right">
+							<!-----------------------  LOGIN FORM ----------------------->
+							<section class="content-right">
+								<!-----------------------  LOGO ----------------------->
+								<div class="row content-right__logo-container">
+									<img src="assets\images\logo.png" alt="Instagram" />
+								</div>
+								<!-----------------------  LOGO END ----------------------->
 
-					<div class="col content-left">
-						<section class="content-left">
-							<div class="row content-left__logo-container">
-								<img src="assets\images\logo.png" alt="Instagram" />
-							</div>
-							<div class="row content-left__form-container">
-								<form>
-									<div class="mb-3">
-										<input
-											type="email"
-											class="form-control"
-											id="exampleInputEmail1"
-											aria-describedby="emailHelp"
-											placeholder="Phone number,username, or email"
-										/>
-									</div>
-									<div class="mb-3">
-										<input
-											type="password"
-											class="form-control"
-											id="exampleInputPassword1"
-											placeholder="Password"
-										/>
-									</div>
-									<a class="btn btn-primary" href="home.html">Log In</a>
-								</form>
-							</div>
-							<div class="row content-left__register">
-								<p class="content-left__register__text">
-									¿No tienes una cuenta?
-									<a
-										href="https://www.instagram.com/accounts/emailsignup/?hl=es"
-									>
-										Regístrate
-									</a>
-								</p>
-							</div>
-							<div class="row content-left__download">
-								<div class="row">
-									<p class="content-left__download__text">Download app</p>
-								</div>
-								<div class="row">
-									<div class="col content-left__download__apple">
-										<a
-											class="appstore-link"
-											href="https://apps.apple.com/app/instagram/id389801252?vt=lo"
-										>
-											<img src="assets\images\appstore.png" alt="App Store" />
-										</a>
-									</div>
-									<div class="col content-left__download__google">
-										<a
-											class="appstore-link"
-											href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb&utm_campaign=loginPage&ig_mid=BFD44297-7C93-4101-A438-F73E52CDB81B&utm_content=lo&utm_medium=badge"
-										>
-											<img
-												src="assets\images\googleplay.png"
-												alt="Google Play"
+								<!-----------------------  CAROUSEL ----------------------->
+								<div class="row content-right__form-container">
+									<form>
+										<div class="mb-3">
+											<input
+												type="email"
+												class="form-control"
+												id="exampleInputEmail1"
+												aria-describedby="emailHelp"
+												placeholder="Phone number,username, or email"
 											/>
+										</div>
+										<div class="mb-3">
+											<input
+												type="password"
+												class="form-control"
+												id="exampleInputPassword1"
+												placeholder="Password"
+											/>
+										</div>
+										<a class="btn btn-primary" href="home.html">Log In</a>
+									</form>
+								</div>
+								<!-----------------------  CAROUSEL END ----------------------->
+
+								<!-----------------------  CAROUSEL REGISTER ----------------------->
+								<div class="row content-right__register">
+									<p class="content-right__register__text">
+										¿No tienes una cuenta?
+										<a
+											href="https://www.instagram.com/accounts/emailsignup/?hl=es"
+										>
+											Regístrate
 										</a>
+									</p>
+								</div>
+								<!-----------------------  CAROUSEL REGISTER END ----------------------->
+
+								<!-----------------------  CAROUSEL DOWNLOAD ----------------------->
+								<div class="row content-right__download">
+									<div class="row">
+										<p class="content-right__download__text">Download app</p>
+									</div>
+									<div class="row">
+										<div class="col content-right__download__apple">
+											<a
+												class="appstore-link"
+												href="https://apps.apple.com/app/instagram/id389801252?vt=lo"
+											>
+												<img src="assets\images\appstore.png" alt="App Store" />
+											</a>
+										</div>
+										<div class="col content-right__download__google">
+											<a
+												class="appstore-link"
+												href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb&utm_campaign=loginPage&ig_mid=BFD44297-7C93-4101-A438-F73E52CDB81B&utm_content=lo&utm_medium=badge"
+											>
+												<img
+													src="assets\images\googleplay.png"
+													alt="Google Play"
+												/>
+											</a>
+										</div>
 									</div>
 								</div>
-							</div>
-						</section>
+								<!-----------------------  CAROUSEL DOWNLOAD END ----------------------->
+							</section>
+							<!-----------------------  LOGIN FORM END ----------------------->
+						</div>
 					</div>
 				</div>
 			</div>
 		</main>
 		<footer>
 			<div class="footer">
+				<!-----------------------  LINKS ----------------------->
 				<div class="row footer__link-container">
 					<div class="col">
 						<a href="https://about.instagram.com/">Información</a>
@@ -210,7 +215,9 @@
 						<a href="https://about.instagram.com/">Artes visuales</a>
 					</div>
 				</div>
+				<!-----------------------  LOGIN FORM END ----------------------->
 
+				<!-----------------------  FOOTER ----------------------->
 				<div class="row footer__ending">
 					<div class="col footer__ending__language">
 						<select class="form-select" aria-label="Default select example">
@@ -224,6 +231,7 @@
 						<p>© 2021 Instagram from Facebook</p>
 					</div>
 				</div>
+				<!-----------------------  FOOTER END ----------------------->
 			</div>
 		</footer>
 	</body>

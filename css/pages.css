@@ -1,21 +1,23 @@
-%col {
-  width: $widht_half;
+.navBar__logo img {
+  max-width: 103px;
+}
+
+.navBar__searchBar {
+  max-width: 215px;
+}
+
+.navBar__icons {
+  max-width: 220px;
 }
 
 .container {
-  -webkit-box-flex: 1;
   flex-grow: 1;
-  -webkit-box-ordinal-group: 5;
   order: 4;
 }
 
 .container__row {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   flex-direction: row;
-  -webkit-box-flex: 1;
   flex-grow: 1;
-  -webkit-box-pack: center;
   justify-content: center;
   margin: 32px auto 0;
   max-width: 935px;
@@ -32,12 +34,13 @@
 }
 
 .col__content-left {
-  @extend %col;
-  align-self: center;
+  -webkit-align-self: center;
   margin-left: -35px;
-
+  width: 50%;
 }
 
 .col__content-right {
-  @extend %col
+  width: 50%;
 }
+
+/*# sourceMappingURL=pages.css.map */
