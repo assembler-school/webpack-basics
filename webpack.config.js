@@ -17,7 +17,7 @@ module.exports = (env, { mode }) => {
             hot: true
         },
         entry: {
-            main: path.resolve(__dirname, "./src/main.js")
+            main: path.resolve(__dirname, "./src/assets/js/main.js")
         },
         output: {
             path: path.resolve(__dirname, "./build"),
@@ -30,6 +30,10 @@ module.exports = (env, { mode }) => {
                 filename: "index.html"
             }),
             new webpack.HotModuleReplacementPlugin(),
+            new webpack.ProvidePlugin({
+                $: "jquery",
+                jQuery: "jquery"
+            })
         ],
         module: {
             rules: [
@@ -41,8 +45,8 @@ module.exports = (env, { mode }) => {
                 {
                     test: /\.(scss|css)$/,
                     use: ["style-loader", "css-loader", "sass-loader"]
-                }
+                },
             ]
-        }
+        },
     }
 }
