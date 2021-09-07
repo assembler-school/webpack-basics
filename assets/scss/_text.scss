@@ -1,0 +1,13 @@
+$sizes :(
+  "small" : 1rem,
+  "medium": 1.50rem,
+  "large" : 3rem 
+);
+@mixin font-sizes($sizes) {
+  @each $key,$value in $sizes {
+    .font-#{$key}{
+      font-size: $value;
+    }
+  }
+}
+@include font-sizes($sizes);
