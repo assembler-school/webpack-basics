@@ -1,6 +1,8 @@
 const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = (env, { mode }) => {
@@ -30,6 +32,10 @@ module.exports = (env, { mode }) => {
                 filename: "index.html"
             }),
             new webpack.HotModuleReplacementPlugin(),
+            new MiniCssExtractPlugin({
+                filename: isProduction ? '[name].[hash].css' : '[name].css',
+                chunkFilename: isProduction ? '[id].[hash].css' : '[id].css'
+            }),
             new webpack.ProvidePlugin({
                 $: "jquery",
                 jQuery: "jquery"
@@ -44,9 +50,16 @@ module.exports = (env, { mode }) => {
                 },
                 {
                     test: /\.(scss|css)$/,
-                    use: ["style-loader", "css-loader", "sass-loader"]
+                    use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
                 },
             ]
+        },
+        optimization: {
+            minimizer: [
+                // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+                // `...`,
+                new CssMinimizerPlugin(),
+            ],
         },
     }
 }
