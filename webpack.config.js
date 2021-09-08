@@ -73,7 +73,7 @@ module.exports = (env, { mode }) => {
                         loader: 'url-loader',
                         options: {
                             limit: 8000, // Convert images < 8kb to base64 strings
-                            name: 'assets/images/[fullhash]-[name].[ext]'
+                            name: 'assets/images/[contenthash]-[name].[ext]'
                         }
                     }]
                 },
@@ -83,7 +83,7 @@ module.exports = (env, { mode }) => {
                         loader: 'url-loader',
                         options: {
                             limit: 12000, // Convert images < 12kb to base64 strings
-                            name: 'assets/images/[fullhash]-[name].[ext]'
+                            name: 'assets/images/[contenthash]-[name].[ext]'
                         }
                     }]
                 },
