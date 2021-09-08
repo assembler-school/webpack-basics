@@ -50,12 +50,14 @@ module.exports = {
         use: ["html-loader"],
       },
       {
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|jpeg)$/,
         use: [
           {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
+              outputPath: "img/",
+              publicPath: "img/",
             },
           },
         ],

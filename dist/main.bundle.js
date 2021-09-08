@@ -16,7 +16,7 @@
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".red-text {\\n  color: red; }\\n\\n.text-big {\\n  font-size: 1.5rem; }\\n\\n.text-small {\\n  font-size: 0.9rem; }\\n\\n/*\\r\\n.clase {\\r\\n  color: rgb(255, 0, 0);\\r\\n}\\r\\n*/\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack-basics/./src/scss/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".red-text {\\n  color: red;\\n}\\n\\n.text-big {\\n  font-size: 1.5rem;\\n}\\n\\n.text-small {\\n  font-size: 0.9rem;\\n}\\n\\n/*\\n.clase {\\n  color: rgb(255, 0, 0);\\n}\\n*/\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack-basics/./src/scss/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -125,7 +125,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module-a */ \"./src/js/module-a.js\");\n/* harmony import */ var _module_b__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module-b */ \"./src/js/module-b.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n\r\n\r\n\r\n\r\n\r\n_module_a__WEBPACK_IMPORTED_MODULE_0__.arrow.addEventListener(\"click\", _module_a__WEBPACK_IMPORTED_MODULE_0__.arrowFunction);\r\n\r\nconsole.log(_module_b__WEBPACK_IMPORTED_MODULE_1__.test);\r\n\n\n//# sourceURL=webpack://webpack-basics/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module-a */ \"./src/js/module-a.js\");\n/* harmony import */ var _module_b__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module-b */ \"./src/js/module-b.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n\n\n\n\n\n_module_a__WEBPACK_IMPORTED_MODULE_0__.arrow.addEventListener(\"click\", _module_a__WEBPACK_IMPORTED_MODULE_0__.arrowFunction);\n\nconsole.log(_module_b__WEBPACK_IMPORTED_MODULE_1__.test);\n\n\n//# sourceURL=webpack://webpack-basics/./src/js/main.js?");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"arrow\": () => (/* binding */ arrow),\n/* harmony export */   \"arrowFunction\": () => (/* binding */ arrowFunction)\n/* harmony export */ });\nlet arrow = document.getElementById(\"arrow\");\r\n\r\nconst arrowFunction = () => {\r\n  let textColor = null;\r\n  arrow.classList.toggle(\"red-text\");\r\n\r\n  console.log(arrow.style.fontSize);\r\n\r\n  if (arrow.children.length < 1) {\r\n    let newElement = document.createElement(\"p\");\r\n    arrow.append(newElement);\r\n  }\r\n\r\n  let p = document.querySelector(\"#arrow > p\");\r\n  if (arrow.classList.contains(\"red-text\")) {\r\n    textColor = \"Red\";\r\n  } else {\r\n    textColor = \"Black\";\r\n  }\r\n  p.textContent = `The text color is: ${textColor}`;\r\n};\r\n\r\nclass flight {\r\n  constructor(destiny) {\r\n    this.destiny = destiny;\r\n  }\r\n}\r\nconst flightToBarcelona = new flight(\"Barcelona\");\r\nlet pFlight = document.createElement(\"p\");\r\np.className = \"text-small\";\r\npFlight.textContent = `This flight goes to ${flightToBarcelona.destiny}`;\r\ndocument.querySelector(\"body\").appendChild(pFlight);\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack-basics/./src/js/module-a.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"arrow\": () => (/* binding */ arrow),\n/* harmony export */   \"arrowFunction\": () => (/* binding */ arrowFunction)\n/* harmony export */ });\nlet arrow = document.getElementById(\"arrow\");\n\nconst arrowFunction = () => {\n  let textColor = null;\n  arrow.classList.toggle(\"red-text\");\n\n  console.log(arrow.style.fontSize);\n\n  if (arrow.children.length < 1) {\n    let newElement = document.createElement(\"p\");\n    arrow.append(newElement);\n  }\n\n  let p = document.querySelector(\"#arrow > p\");\n  if (arrow.classList.contains(\"red-text\")) {\n    textColor = \"Red\";\n  } else {\n    textColor = \"Black\";\n  }\n  p.textContent = `The text color is: ${textColor}`;\n};\n\nclass flight {\n  constructor(destiny) {\n    this.destiny = destiny;\n  }\n}\nconst flightToBarcelona = new flight(\"Barcelona\");\nlet pFlight = document.createElement(\"p\");\npFlight.className = \"text-small\";\npFlight.textContent = `This flight goes to ${flightToBarcelona.destiny}`;\ndocument.querySelector(\"body\").appendChild(pFlight);\n\n\n\n\n//# sourceURL=webpack://webpack-basics/./src/js/module-a.js?");
 
 /***/ }),
 
@@ -147,7 +147,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"test\": () => (/* binding */ test)\n/* harmony export */ });\n/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nlet test = \"testIIING\";\r\n$(\"body\").append(\r\n  `<img src='https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260' style=\"width:400px\">`\r\n);\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack-basics/./src/js/module-b.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"test\": () => (/* binding */ test)\n/* harmony export */ });\n/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nlet test = \"testIIING\";\n$(\"body\").append(`<img src='src/img/PikPng.com_sprite-logo-png_2630591.png'>`);\n\n\n\n\n//# sourceURL=webpack://webpack-basics/./src/js/module-b.js?");
 
 /***/ })
 
@@ -236,7 +236,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("b571080a920c31f8f9b2")
+/******/ 		__webpack_require__.h = () => ("4cd7456b93a5658f4744")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
