@@ -1,4 +1,4 @@
-import { h1, arrowF } from "./module-a";
+import { arrow, arrowFunction } from "./module-a";
 import "../scss/main.scss";
 
-h1.addEventListener("click", arrowF);
+arrow.addEventListener("click", arrowFunction);

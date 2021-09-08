@@ -106,7 +106,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module-a */ \"./src/js/module-a.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n\r\n\r\n\r\n_module_a__WEBPACK_IMPORTED_MODULE_0__.h1.addEventListener(\"click\", _module_a__WEBPACK_IMPORTED_MODULE_0__.arrowF);\r\n\n\n//# sourceURL=webpack://webpack-basics/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module-a */ \"./src/js/module-a.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n\r\n\r\n\r\n_module_a__WEBPACK_IMPORTED_MODULE_0__.arrow.addEventListener(\"click\", _module_a__WEBPACK_IMPORTED_MODULE_0__.arrowFunction);\r\n\n\n//# sourceURL=webpack://webpack-basics/./src/js/main.js?");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"h1\": () => (/* binding */ h1),\n/* harmony export */   \"arrowF\": () => (/* binding */ arrowF)\n/* harmony export */ });\nlet h1 = document.getElementById(\"calufa\");\r\n\r\nconst arrowF = () => {\r\n  h1.classList.toggle(\"clase\");\r\n};\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack-basics/./src/js/module-a.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"arrow\": () => (/* binding */ arrow),\n/* harmony export */   \"arrowFunction\": () => (/* binding */ arrowFunction)\n/* harmony export */ });\nlet arrow = document.getElementById(\"arrow\");\r\n\r\nconst arrowFunction = () => {\r\n  let textColor = null;\r\n  arrow.classList.toggle(\"clase\");\r\n\r\n  console.log(arrow.style.fontSize);\r\n\r\n  if (arrow.children.length < 1) {\r\n    let newElement = document.createElement(\"p\");\r\n    arrow.append(newElement);\r\n  }\r\n\r\n  let p = document.querySelector(\"#arrow > p\");\r\n  if (arrow.classList.contains(\"clase\")) {\r\n    textColor = \"Red\";\r\n  } else {\r\n    textColor = \"Black\";\r\n  }\r\n  p.textContent = `The text color is: ${textColor}`;\r\n};\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack-basics/./src/js/module-a.js?");
 
 /***/ })
 
@@ -205,7 +205,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("23c850caff3a64191675")
+/******/ 		__webpack_require__.h = () => ("aa6abe053cb5977bc8d9")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

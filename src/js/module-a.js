@@ -1,18 +1,18 @@
-let h1 = document.getElementById("calufa");
+let arrow = document.getElementById("arrow");
 
-const arrowF = () => {
+const arrowFunction = () => {
   let textColor = null;
-  h1.classList.toggle("clase");
+  arrow.classList.toggle("red-text");
 
-  console.log(h1.style.fontSize);
+  console.log(arrow.style.fontSize);
 
-  if (h1.children.length < 1) {
+  if (arrow.children.length < 1) {
     let newElement = document.createElement("p");
-    h1.append(newElement);
+    arrow.append(newElement);
   }
 
-  let p = document.querySelector("#calufa > p");
-  if (h1.classList.contains("clase")) {
+  let p = document.querySelector("#arrow > p");
+  if (arrow.classList.contains("red-text")) {
     textColor = "Red";
   } else {
     textColor = "Black";
@@ -20,4 +20,14 @@ const arrowF = () => {
   p.textContent = `The text color is: ${textColor}`;
 };
 
-export { h1, arrowF };
+class flight {
+  constructor(destiny) {
+    this.destiny = destiny;
+  }
+}
+const flightToBarcelona = new flight("Barcelona");
+let pFlight = document.createElement("p");
+pFlight.textContent = `This flight goes to ${flightToBarcelona.destiny}`;
+document.querySelector("body").appendChild(pFlight);
+
+export { arrow, arrowFunction };
