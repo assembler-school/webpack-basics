@@ -1,0 +1,14 @@
+@use "../abstracts" as var;
+
+.red-text {
+  color: var.$red-color;
+}
+
+
+.text-big {
+  font-size: var.$font-big;
+}
+
+.text-small {
+  font-size: var.$font-small;
+}
