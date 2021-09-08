@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module-a */ \"./src/js/module-a.js\");\n/* harmony import */ var _module_a__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_module_a__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _module_b__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module-b */ \"./src/js/module-b.js\");\n/* harmony import */ var _module_b__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_module_b__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n\n\n\n\n//# sourceURL=webpack://webpack-basics/./src/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module-a */ \"./src/js/module-a.js\");\n/* harmony import */ var _module_a__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_module_a__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _module_b__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module-b */ \"./src/js/module-b.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n\n\n\n\n//# sourceURL=webpack://webpack-basics/./src/js/app.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \****************************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://webpack-basics/./src/js/module-a.js?");
+eval("const wrapper = document.getElementById(\"root\");\nconst msg = document.createElement(\"p\");\nmsg.className = \"wrapper__msg\";\nmsg.id = \"hint\";\nmsg.textContent = \"What do we need to learn developing?\";\nconst list = document.createElement(\"div\");\nlist.className = \"wrapper__list\";\nlist.innerHTML = `\n<div id=\"flex1\"></div>\n<div id=\"flex2\"></div>\n<div id=\"flex3\"></div>\n`;\nwrapper.append(msg, list);\n\n//# sourceURL=webpack://webpack-basics/./src/js/module-a.js?");
 
 /***/ }),
 
@@ -34,9 +34,10 @@ eval("\n\n//# sourceURL=webpack://webpack-basics/./src/js/module-a.js?");
 /*!****************************!*\
   !*** ./src/js/module-b.js ***!
   \****************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n$(\"#root\").append($(\"<p>\").text(\"Soy una prueba\").css(\"color\", \"red\"));\n$(\"#root\").addClass(\"wrapper\");\n\n//# sourceURL=webpack://webpack-basics/./src/js/module-b.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _img_code_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../img/code.svg */ \"./src/img/code.svg\");\n/* harmony import */ var _img_joystick_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/joystick.png */ \"./src/img/joystick.png\");\n/* harmony import */ var _img_ping_pong_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/ping-pong.png */ \"./src/img/ping-pong.png\");\n/* harmony import */ var _img_assembler_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/assembler.png */ \"./src/img/assembler.png\");\n/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n\n\n\nconst btns = $(\"<div>\").attr(\"id\", \"btns\").addClass(\"wrapper__btns\");\nbtns.append($(\"<button>\").attr(\"id\", \"btn1\").text(\"Click me!\").on(\"click\", () => {\n  $(\"#hint\").text(\"Code!\");\n  $(\"#btn1\").css(\"display\", \"none\");\n  $(\"#root\").append($(\"<div id='trying'></div>\").addClass(\"wrapper__pic\"));\n  const myCode = new Image();\n  const element = document.getElementById(\"trying\");\n  myCode.src = _img_code_svg__WEBPACK_IMPORTED_MODULE_0__;\n  element.appendChild(myCode);\n  btns.append($(\"<button>\").attr(\"id\", \"btn2\").text(\"Click me again!\").on(\"click\", () => {\n    $(\"#hint\").text(\"Videogames!\");\n    $(\"#btn2\").css(\"display\", \"none\");\n    element.innerHTML = \"\";\n    $(\"#flex1\").append(myCode);\n    const myJst = new Image();\n    myJst.src = _img_joystick_png__WEBPACK_IMPORTED_MODULE_1__;\n    element.appendChild(myJst);\n    btns.append($(\"<button>\").attr(\"id\", \"btn3\").text(\"Click me harder!\").on(\"click\", () => {\n      $(\"#hint\").text(\"Ping Pong!\");\n      $(\"#btn3\").css(\"display\", \"none\");\n      element.innerHTML = \"\";\n      $(\"#flex2\").append(myJst);\n      const myPong = new Image();\n      myPong.src = _img_ping_pong_png__WEBPACK_IMPORTED_MODULE_2__;\n      element.appendChild(myPong);\n      btns.append($(\"<button>\").attr(\"id\", \"btn4\").text(\"One last time!\").on(\"click\", () => {\n        $(\"#hint\").text(\"And ready for Assembler!\");\n        $(\"#btn4\").css(\"display\", \"none\");\n        element.innerHTML = \"\";\n        $(\"#flex3\").append(myPong);\n        const myAss = new Image();\n        myAss.src = _img_assembler_png__WEBPACK_IMPORTED_MODULE_3__;\n        element.appendChild(myAss);\n      }));\n    }));\n  }));\n}));\n$(\"#root\").append(btns);\n\n//# sourceURL=webpack://webpack-basics/./src/js/module-b.js?");
 
 /***/ }),
 
@@ -47,7 +48,7 @@ eval("/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./no
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".wrapper {\\n  background-color: blue;\\n}\\n\\n#root {\\n  border: 1px solid blue;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack-basics/./src/scss/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".wrapper {\\n  background-color: white;\\n  padding-top: 2rem;\\n  margin: 5rem auto;\\n  width: 30rem;\\n  height: 30rem;\\n  text-align: center;\\n}\\n.wrapper__msg {\\n  margin-top: 1rem;\\n  font-size: 2rem;\\n  font-weight: 600;\\n  font-family: \\\"Franklin Gothic Medium\\\", \\\"Arial Narrow\\\", Arial, sans-serif;\\n}\\n.wrapper__list {\\n  display: flex;\\n  justify-content: space-between;\\n  margin: 0 2rem 2rem;\\n}\\n.wrapper__list div {\\n  text-align: center;\\n}\\n.wrapper__list img {\\n  height: 6rem;\\n}\\n.wrapper__pic {\\n  background-color: white;\\n}\\n.wrapper__pic img {\\n  height: 20rem;\\n  margin-bottom: 2rem;\\n}\\n.wrapper__btns {\\n  text-align: center;\\n  margin: 1rem auto;\\n  width: 50%;\\n}\\n.wrapper__btns button {\\n  height: 3rem;\\n  width: 8rem;\\n  color: white;\\n  background-color: red;\\n  border: 1px solid black;\\n}\\n\\nbody {\\n  background-color: black;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack-basics/./src/scss/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -147,6 +148,50 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(style, options, obj) {\n  
 "use strict";
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\n  if (style.styleSheet) {\n    style.styleSheet.cssText = css;\n  } else {\n    while (style.firstChild) {\n      style.removeChild(style.firstChild);\n    }\n\n    style.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://webpack-basics/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
 
+/***/ }),
+
+/***/ "./src/img/assembler.png":
+/*!*******************************!*\
+  !*** ./src/img/assembler.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2b7c0b20fb3e084a4d22.png\";\n\n//# sourceURL=webpack://webpack-basics/./src/img/assembler.png?");
+
+/***/ }),
+
+/***/ "./src/img/code.svg":
+/*!**************************!*\
+  !*** ./src/img/code.svg ***!
+  \**************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"17384618fa65430d38c8.svg\";\n\n//# sourceURL=webpack://webpack-basics/./src/img/code.svg?");
+
+/***/ }),
+
+/***/ "./src/img/joystick.png":
+/*!******************************!*\
+  !*** ./src/img/joystick.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"483a39639b31e46de768.png\";\n\n//# sourceURL=webpack://webpack-basics/./src/img/joystick.png?");
+
+/***/ }),
+
+/***/ "./src/img/ping-pong.png":
+/*!*******************************!*\
+  !*** ./src/img/ping-pong.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"84b800eadeaa7ca10a05.png\";\n\n//# sourceURL=webpack://webpack-basics/./src/img/ping-pong.png?");
+
 /***/ })
 
 /******/ 	});
@@ -200,6 +245,18 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -214,6 +271,26 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

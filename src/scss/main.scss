@@ -1,6 +1,8 @@
 @use "./color";
 @use "./text";
+@use "./layout";
 
-#root {
-    border: 1px solid blue;
+
+body {
+    background-color: black;
 }
