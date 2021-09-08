@@ -22,14 +22,11 @@
 
 \* **ImageMinimizerPlugin**: This plugin uses imagemin to optimize your images.
 
-\* **URL-Loader**: a loader for webpack which transforms files into base64 URIs.
-
 ## More modules used
 
 \* **JQuery**: the purpose of jQuery is to make it much easier to use JavaScript on your website.
 
 ## Resources
-
 
 - [WebPack Official](https://webpack.js.org/)
 - [ECMAScript 6 compatibility](https://kangax.github.io/compat-table/es6/)
