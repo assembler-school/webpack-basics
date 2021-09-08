@@ -2,6 +2,9 @@
 
 # WebPack Basics <!-- omit in toc -->
 
+- [@haroon](https://github.com/haroonahmad12)
+- [@tam](https://github.com/tamtran2885)
+
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
 </p>
@@ -28,6 +31,14 @@
 
 ## Table of Contents
 
+| File / Folder       | Description                                                |
+| ------------------- | ---------------------------------------------------------- |
+| `dist`              | Folder with assets created by webpack                      |
+| `src`               | Folder with necessary files                                |
+| `package.json`      | List the packages the project depends on                   |
+| `package-lock.json` | Keep track of the exact version of every package installed |
+| `.gitignore`        | Untracked files that Git should ignore                     |
+
 ## Technologies used
 
 \* HTML
@@ -48,11 +59,49 @@
 
 `npm install url-loader file-loader --save-dev`
 
+`npm install image-webpack-loader --save-dev`
+
 ## Usage
 
 `npx webpack-dev-server`
+
+`npm run build`
 
 ## Resources
 
 - [WebPack Official](https://webpack.js.org/)
 - [ECMAScript 6 compatibility](https://kangax.github.io/compat-table/es6/)
+
+## Steps
+
+- Creating Folders and Files
+  `JS`
+  `SCSS`
+  `IMG`
+  `Index.html`
+
+- Install Webpack and necessary Plugins
+- Webpack Configuration
+  `webpack.config.js`
+
+- Configure package.json
+- Install Dependencies
+- Coding in `module-a.js`:
+
+  - `Make use of an Arrow Function`
+  - `Make use of an ES6 Class`
+  - `Use Template String`
+  - `Use Let and Const to create Variables`
+
+- Coding in `module-b.js`
+
+  - `Import and use jQuery`
+
+- Import all Functions and Variables to `main.js`
+
+- Import Images to `main.js`:
+
+  - `Insert Images in HTML`
+
+- Compress all the Images (jpg, png, svg)
+  - `using webpack to compress image files`
