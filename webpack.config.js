@@ -113,7 +113,7 @@ module.exports = (env, { mode }) => {
                     test: /\.(png|jpe?g|gif|svg)$/i,
                     type: "asset",
                     generator: {
-                        filename: ({ filename }) => filename.replace('', '')
+                        filename: ({ filename }) => filename.replace('src', '')
                     },
                 },
                 {
