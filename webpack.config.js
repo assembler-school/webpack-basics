@@ -1,9 +1,13 @@
 const path = require("path");
 const webpack = require("webpack");
 const svgToMiniDataURI = require("mini-svg-data-uri");
+
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
 const ImageMinimizerWebpackPlugin = require("image-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const imagemin = require("./imagemin.config");
 
 module.exports = {
 	mode: "development",
@@ -19,7 +23,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, "./dist"),
 		filename: "[name].js",
-		assetModuleFilename: "images/[hash][ext][query]",
+		assetModuleFilename: "images/[name][ext][query]",
 	},
 	plugins: [
 		new webpack.ProvidePlugin({
@@ -31,13 +35,19 @@ module.exports = {
 			template: "./src/index.html",
 			filename: "index.html",
 		}),
+		new CssMinimizerWebpackPlugin(),
 		new ImageMinimizerWebpackPlugin({
 			minimizerOptions: {
-				plugins: ["gifsicle", "jpegtran", "optipng", "svgo"],
+				plugins: [
+					["gifsicle", imagemin.gifsicle],
+					["mozjpeg", imagemin.mozjpeg],
+					["pngquant", imagemin.pngquant],
+					["svgo", imagemin.svgo],
+				],
 			},
 		}),
 		new MiniCssExtractPlugin({
-			filename: "[name].css",
+			filename: "styles/[name].css",
 		}),
 	],
 	module: {

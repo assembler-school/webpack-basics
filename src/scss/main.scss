@@ -3,13 +3,14 @@
 
 body {
 	background-image: url(../images/landscape.jpg);
-	background-size: cover;
+	background-size: cover cover;
 	background-repeat: no-repeat;
 }
 
 .img {
 	margin: 0 auto;
 	display: block;
+	width: 12rem;
 }
 
 * {
