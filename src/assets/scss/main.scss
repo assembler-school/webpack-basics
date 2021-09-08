@@ -1,5 +1,2 @@
-$font-color: blue;
-
-html {
-  color: $font-color;
-}
+@use './colors';
+@use './text';
