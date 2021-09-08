@@ -1,7 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
@@ -25,7 +24,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack Workshop Test",
+      title: "Webpack Pill",
       template: path.resolve(__dirname, "./index.html"),
       filename: "index.html",
     }),
@@ -34,7 +33,6 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
     }),
-    new MiniCssExtractPlugin(),
   ],
 
   module: {
@@ -46,17 +44,14 @@ module.exports = {
 
       {
         test: /\.(scss|css)$/,
-        use: [
-          "style-loader",
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader",
-        ],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
+      /*
       {
         test: /\.html$/,
         use: ["html-loader"],
       },
+      */
       {
         test: /\.(png|svg|jpg)$/,
 
