@@ -4,6 +4,7 @@ import { jq } from './module-b';
 import homeIcon from '../images/home.png';
 import googleIcon from '../images/google.png';
 import activityIcon from '../images/activity.svg';
+import paradisePic from '../images/paradise.jpeg';
 
 // module-b
 jq();
@@ -27,3 +28,6 @@ googleImg.src = googleIcon;
 
 var activityImg = document.getElementById('activity');
 activityImg.src = activityIcon;
+
+var paradiseImg = document.getElementById('paradise');
+paradiseImg.src = paradisePic;
