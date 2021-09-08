@@ -1,5 +1,5 @@
 import Code from "../img/code.svg";
-import Jst from "../img/joystick.png";
+import Jst from "../img/joystick.jpg";
 import Pong from "../img/ping-pong.png";
 import Ass from "../img/assembler.png";
 

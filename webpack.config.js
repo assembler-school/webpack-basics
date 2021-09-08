@@ -1,13 +1,15 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
   entry: "./src/js/app.js", //?main: path.resolve(__dirname, "./src/app.js")
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].bundle.js",
+    filename: "assets/js/[name].bundle.js",
+    assetModuleFilename: "assets/images/[hash][ext][query]",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -20,21 +22,42 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
     }),
+    new MiniCssExtractPlugin({
+      filename: "styles/[name].css",
+    }),
   ],
   module: {
     rules: [
       {
-        test: /\.js$/, // "\" para interpretar el siguiente caracter como tal, $ para indicar que se acaba la string. En general, todo junto sirve para decir archivos que acaben en ".js"
+        test: /\.js$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
       {
         test: /\.(css|scss)$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(jpg|jpeg|gif)$/i,
         type: "asset/resource",
+      },
+      {
+        test: /\.(png|svg)$/i,
+        type: "asset/inline",
+      },
+      {
+        test: /\.(jpg|png|gif|svg)$/,
+        loader: "image-webpack-loader",
+        // Specify enforce: 'pre' to apply the loader
+        // before url-loader/svg-url-loader
+        // and not duplicate it in rules with them
+        enforce: "pre",
+        options: {
+          pngquant: {
+            quality: [0.65, 0.9],
+            speed: 9,
+          },
+        },
       },
     ],
   },
