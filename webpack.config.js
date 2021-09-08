@@ -23,7 +23,7 @@ module.exports = (env, { mode }) => {
         },
         output: {
             path: path.resolve(__dirname, "./build"),
-            filename: isProduction ? '[name].[contenthash].js' : '[name].bundle.js',
+            filename: isProduction ? '[name].[chunkhash].js' : '[name].bundle.js',
         },
         plugins: [
             new HtmlWebpackPlugin({
@@ -33,8 +33,8 @@ module.exports = (env, { mode }) => {
             }),
             new webpack.HotModuleReplacementPlugin(),
             new MiniCssExtractPlugin({
-                filename: isProduction ? '[name].[fullhash].css' : '[name].css',
-                chunkFilename: isProduction ? '[id].[fullhash].css' : '[id].css'
+                filename: isProduction ? '[name].[contenthash].css' : '[name].css',
+                chunkFilename: isProduction ? '[id].[contenthash].css' : '[id].css'
             }),
             new webpack.ProvidePlugin({
                 $: "jquery",
