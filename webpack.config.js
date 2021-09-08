@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = (env, { mode }) => {
@@ -14,10 +15,8 @@ module.exports = (env, { mode }) => {
     return {
         devServer: {
             historyApiFallback: true,
-            //port: 4000,
             open: true,
-            compress: true,
-            hot: true
+            compress: true
         },
         entry: {
             main: path.resolve(__dirname, "./src/assets/js/main.js")
@@ -40,6 +39,26 @@ module.exports = (env, { mode }) => {
             new webpack.ProvidePlugin({
                 $: "jquery",
                 jQuery: "jquery"
+            }),
+            new ImageMinimizerPlugin({
+                minimizerOptions: {
+                    plugins: [
+                        ["gifsicle", { interlaced: true }],
+                        ["jpegtran", { progressive: true }],
+                        ["optipng", { optimizationLevel: 7 }],
+                        [
+                            "svgo",
+                            {
+                                plugins: [
+                                    {
+                                        name: "removeViewBox",
+                                        active: false,
+                                    },
+                                ],
+                            },
+                        ],
+                    ],
+                },
             }),
             /**
              * All files inside webpack's output.path directory will be removed once, but the
@@ -68,27 +87,32 @@ module.exports = (env, { mode }) => {
                     use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
                 },
                 {
-                    test: /\.(png|jp(e*)g)$/,
-                    use: [{
-                        loader: 'url-loader',
-                        options: {
-                            limit: 8000, // Convert images < 8kb to base64 strings
-                            name: 'assets/images/[contenthash]-[name].[ext]'
-                        }
-                    }]
+                    test: /\.(png)$/i,
+                    type: "asset",
+                    parser: {
+                        dataUrlCondition: {
+                            maxSize: 8 * 1024,
+                        },
+                    },
                 },
                 {
-                    test: /\.(svg)$/,
-                    use: [{
-                        loader: 'url-loader',
-                        options: {
-                            limit: 12000, // Convert images < 12kb to base64 strings
-                            name: 'assets/images/[contenthash]-[name].[ext]'
-                        }
-                    }]
+                    test: /\.svg$/i,
+                    type: "asset/inline",
+                    parser: {
+                        dataUrlCondition: {
+                            maxSize: 12 * 1024,
+                        },
+                    },
                 },
                 {
-                    test: /\.(jpg|png|gif|svg)$/,
+                    test: /\.(png|jpe?g|gif|svg)$/i,
+                    type: "asset",
+                    generator: {
+                        filename: ({ filename }) => filename.replace('', '')
+                    },
+                },
+                {
+                    test: /\.(png|jpe?g|gif|svg)$/i,
                     loader: 'image-webpack-loader',
                     // Specify enforce: 'pre' to apply the loader
                     // before url-loader/svg-url-loader
