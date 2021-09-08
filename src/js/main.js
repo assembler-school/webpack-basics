@@ -1,7 +1,7 @@
 import "../css/main.scss";
 import { btn, golden, dogs, sum } from "./module-a";
 import { btnJquery } from "./module-b";
-import img1 from "../img/halloween.png";
+import img1 from "../img/logo.png";
 import img2 from "../img/penguin.svg";
 import img3 from "../img/corgi.jpg";
 import img4 from "../img/lavender.png";
