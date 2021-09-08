@@ -1,6 +1,5 @@
 const path = require("path");
 const webpack = require("webpack");
-const svgToMiniDataURI = require("mini-svg-data-uri");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
@@ -45,6 +44,13 @@ module.exports = {
 					["svgo", imagemin.svgo],
 				],
 			},
+			filter: (source, sourcePath) => {
+				if (/\.svg$/.test(sourcePath) && source.byteLength > 1024 * 12) return true;
+				if (/\.png$/.test(sourcePath) && source.byteLength > 1024 * 8) return true;
+				if (/\.(jpe?g|gif)$/.test(sourcePath)) return true;
+
+				return false;
+			},
 		}),
 		new MiniCssExtractPlugin({
 			filename: "styles/[name].css",
@@ -86,12 +92,6 @@ module.exports = {
 				parser: {
 					dataUrlCondition: {
 						maxSize: 12 * 1024, // 12kb
-					},
-				},
-				generator: {
-					dataUrl: (content) => {
-						content = content.toString();
-						return svgToMiniDataURI(content);
 					},
 				},
 			},
