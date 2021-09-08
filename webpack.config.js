@@ -52,7 +52,9 @@ module.exports = (env, { mode }) => {
              *
              * See `Options and Defaults` for information
              */
-            new CleanWebpackPlugin(),
+            new CleanWebpackPlugin({
+                dry: isProduction ? false : true,
+            }),
         ],
         module: {
             rules: [
@@ -65,6 +67,34 @@ module.exports = (env, { mode }) => {
                     test: /\.(scss|css)$/,
                     use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
                 },
+                {
+                    test: /\.(png|jp(e*)g)$/,
+                    use: [{
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8000, // Convert images < 8kb to base64 strings
+                            name: 'assets/images/[hash]-[name].[ext]'
+                        }
+                    }]
+                },
+                {
+                    test: /\.(svg)$/,
+                    use: [{
+                        loader: 'url-loader',
+                        options: {
+                            limit: 12000, // Convert images < 12kb to base64 strings
+                            name: 'assets/images/[hash]-[name].[ext]'
+                        }
+                    }]
+                },
+                {
+                    test: /\.(jpg|png|gif|svg)$/,
+                    loader: 'image-webpack-loader',
+                    // Specify enforce: 'pre' to apply the loader
+                    // before url-loader/svg-url-loader
+                    // and not duplicate it in rules with them
+                    enforce: 'pre'
+                }
             ]
         },
         optimization: {
