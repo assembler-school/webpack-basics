@@ -13,7 +13,7 @@ module.exports = (env, { mode }) => {
     return {
         devServer: {
             historyApiFallback: true,
-            port: 4000,
+            //port: 4000,
             open: true,
             compress: true,
             hot: true
