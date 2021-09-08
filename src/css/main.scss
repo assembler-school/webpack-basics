@@ -1,0 +1,217 @@
+@use './_colors.scss' as colors;
+@use './_text.scss' as text;
+@forward './_reset.scss';
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: colors.$aqua;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+header {
+    height: 100%;
+    width: 300px;
+    background-color: colors.$black;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    flex-grow: 1;
+}
+
+section {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+h1 {
+    font-family: text.$family;
+    font-size: 40px;
+    color: colors.$black;
+    margin-bottom: 20px;
+    font-weight: text.$light;
+    height: 40px;
+}
+
+.js {
+    flex-grow: 1;
+    background-color: colors.$aqua;
+}
+
+.jq {
+    flex-grow: 1;
+    background-color: colors.$jquery;
+}
+
+.sass {
+    flex-grow: 1;
+    background-color: colors.$saas;
+}
+
+.div {
+    padding: 20px;
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.p2 {
+    background-color: colors.$orange;
+}
+
+.p3 {
+    background-color: colors.$pink;
+}
+
+.p4 {
+    background-color: white;
+}
+
+.p1 {
+    background-color: colors.$purple;
+}
+
+.text-s {
+    font-family: text.$family;
+    font-size: 16px;
+    font-weight: text.$light;
+    color: colors.$black;
+    margin-bottom: 15px;
+}
+
+.small-div {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.btn {
+    width: max-content;
+    background-color: transparent;
+    color: colors.$black;
+    border: 2px solid colors.$black;
+    font-family: text.$family;
+    font-size: 14px;
+    font-weight: text.$light;
+    border-radius: 15px;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 1;
+    margin-bottom: 15px;
+}
+
+.neg {
+    width: max-content;
+    background-color: transparent;
+    font-family: text.$family;
+    font-size: 14px;
+    font-weight: text.$light;
+    border-radius: 15px;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 1;
+    margin-bottom: 15px;
+    border: 2px solid white;
+    color: white;
+}
+
+.purple {
+    background-color: colors.$purple;
+}
+
+.neg:hover {
+    background-color: white;
+    color: colors.$black;
+}
+
+.neg:active {
+    opacity: 0.6;
+    transform: scale(0.98);
+}
+
+.btn:hover {
+    background-color: colors.$black;
+    color: white;
+}
+
+.btn:active {
+    opacity: 0.6;
+    transform: scale(0.98);
+}
+
+.full-size {
+    width: calc(100% - 155px);
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #000;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 155px;
+    transition: 0.2s;
+    overflow: scroll;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-ic {
+    font-family: text.$family;
+    font-weight: text.$bold;
+    color: white;
+    line-height: 18px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.text-mod {
+    width: 100%;
+    height: 0%;
+    background-color: colors.$black;
+    padding: 15px;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.show {
+    height: 100%;
+    opacity: 1;
+}
+
+.white {
+    color: white;
+    line-height: 20px;
+}
+
+.grey {
+    color: rgb(179, 179, 179);
+    line-height: 20px;
+    margin-bottom: 20px;
+}
