@@ -34,8 +34,8 @@ module.exports = (env, { mode }) => {
             }),
             new webpack.HotModuleReplacementPlugin(),
             new MiniCssExtractPlugin({
-                filename: isProduction ? '[name].[hash].css' : '[name].css',
-                chunkFilename: isProduction ? '[id].[hash].css' : '[id].css'
+                filename: isProduction ? '[name].[fullhash].css' : '[name].css',
+                chunkFilename: isProduction ? '[id].[fullhash].css' : '[id].css'
             }),
             new webpack.ProvidePlugin({
                 $: "jquery",
@@ -73,7 +73,7 @@ module.exports = (env, { mode }) => {
                         loader: 'url-loader',
                         options: {
                             limit: 8000, // Convert images < 8kb to base64 strings
-                            name: 'assets/images/[hash]-[name].[ext]'
+                            name: 'assets/images/[fullhash]-[name].[ext]'
                         }
                     }]
                 },
@@ -83,7 +83,7 @@ module.exports = (env, { mode }) => {
                         loader: 'url-loader',
                         options: {
                             limit: 12000, // Convert images < 12kb to base64 strings
-                            name: 'assets/images/[hash]-[name].[ext]'
+                            name: 'assets/images/[fullhash]-[name].[ext]'
                         }
                     }]
                 },
