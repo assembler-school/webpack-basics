@@ -1,0 +1,21 @@
+$height: 4rem;
+.header { grid-area: header;}
+.main {
+  grid-area: main;
+  height: calc(100vh - (#{$height} * 2));
+  background-image: url('../../assets/images/image.png');
+  background-size: cover;
+}
+
+.footer { grid-area: footer;}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: $height minmax(400px, auto) $height;
+  grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer"
+  ;
+}
