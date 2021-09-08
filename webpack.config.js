@@ -42,8 +42,8 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
+        use: ["babel-loader"],
       },
-
       {
         test: /\.(scss|css)$/,
         use: [
@@ -61,7 +61,6 @@ module.exports = {
 
       {
         test: /\.(png|svg|jpg)$/,
-
         type: "asset",
       },
     ],
