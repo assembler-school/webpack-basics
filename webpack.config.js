@@ -25,13 +25,14 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Webpack Workshop Test",
-
       template: path.resolve(__dirname, "./index.html"),
-
       filename: "index.html",
     }),
-
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+    }),
   ],
 
   module: {
@@ -43,6 +44,21 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.html$/,
+        use: ["html-loader"],
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+            },
+          },
+        ],
       },
     ],
   },

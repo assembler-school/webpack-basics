@@ -27,6 +27,7 @@ class flight {
 }
 const flightToBarcelona = new flight("Barcelona");
 let pFlight = document.createElement("p");
+pFlight.className = "text-small";
 pFlight.textContent = `This flight goes to ${flightToBarcelona.destiny}`;
 document.querySelector("body").appendChild(pFlight);
 
