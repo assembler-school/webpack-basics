@@ -1,7 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-//const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
@@ -34,7 +34,7 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
     }),
-    //new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin(),
   ],
 
   module: {
@@ -43,17 +43,17 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
       },
-      /*
+
       {
         test: /\.(scss|css)$/,
         use: [
-          "style-loader",
+          //"style-loader",
           MiniCssExtractPlugin.loader,
           "css-loader",
           "sass-loader",
         ],
       },
-      */
+
       {
         test: /\.html$/,
         use: ["html-loader"],
