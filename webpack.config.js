@@ -1,7 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
@@ -34,10 +33,6 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
     }),
-
-    new MiniCssExtractPlugin({
-      filename: "./[name].css",
-    }),
   ],
 
   module: {
@@ -47,30 +42,23 @@ module.exports = {
         exclude: /node_modules/,
       },
 
-      {
-        test: /\.(scss|css)$/,
-        use: [
-          "style-loader",
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader",
-        ],
-      },
+      // {
+      //   test: /\.(scss|css)$/,
+      //   use: [
+      //     "style-loader",
+      //     MiniCssExtractPlugin.loader,
+      //     "css-loader",
+      //     "sass",
+      //   ],
+      // },
       {
         test: /\.html$/,
         use: ["html-loader"],
       },
       {
-        test: /\.(jpg|png)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "./img",
-            },
-          },
-        ],
+        test: /\.(png|svg|jpg)$/,
+
+        type: "asset",
       },
     ],
   },
