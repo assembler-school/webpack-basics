@@ -1,4 +1,4 @@
-import '../assets/scss/main.scss';
+
 //arrow function
 const example = () => {
   console.log("hello");
@@ -18,7 +18,7 @@ console.log(student1.name);
 //template strings
 let paragraph = document.createElement('p');
 paragraph.textContent = `the name of the student is: ${student1.name}`;
-paragraph.className = "bg-red";
+paragraph.className = "font-large";
 document.querySelector("#root").append(paragraph);
 
 //let and const

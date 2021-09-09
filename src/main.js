@@ -1,2 +1,3 @@
-import a from "./module-a" ;
-import b from "./module-b" ;
+import './scss/main.scss';
+import "./module-a" ;
+import "./module-b" ;

@@ -3,6 +3,7 @@ $sizes :(
   "medium": 1.50rem,
   "large" : 3rem 
 );
+
 @mixin font-sizes($sizes) {
   @each $key,$value in $sizes {
     .font-#{$key}{
@@ -10,4 +11,9 @@ $sizes :(
     }
   }
 }
+
+.img{
+  width: 150px;
+}
+
 @include font-sizes($sizes);
