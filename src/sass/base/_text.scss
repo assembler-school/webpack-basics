@@ -1,0 +1,14 @@
+@import "../abstracts/colors";
+
+.container{
+    text-align:center;
+}
+
+h1{
+    text-align: center;
+    color: $principal_color;
+}
+
+h2{
+    color: $secondary_color;
+}

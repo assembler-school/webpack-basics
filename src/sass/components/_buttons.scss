@@ -1,0 +1,27 @@
+@import "../abstracts/colors";
+
+button {
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: $button_color;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 6px #999;
+    width: 290px;
+    height: 75px;
+}
+
+button:hover {
+    background-color: #3e8e41
+}
+
+button:active {
+  background-color: $button_color;
+  box-shadow: 0 0px;
+  transform: translateY(4px);
+}
