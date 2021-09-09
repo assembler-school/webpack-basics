@@ -58,3 +58,5 @@ To run Webpack-Dev, run the following command
 
 Paris Arcos[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/paris-arcos-martin-268708217/)
 Jaime Alcalde[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jaime-alcalde-809531216/)
+
+THANKS!
