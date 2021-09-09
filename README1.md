@@ -1,16 +1,22 @@
 # Webpack pill
 
-This is an academical project to practice Webpack5 technologies and integrate it Sass. 
+This is an academical project to practice Webpack5 technologies and integrate it into Sass. 
 
 ## Technologies
+
 -- Webpack 5 and pluggings to generate html bundle, images and css
--- Sass
+
 -- HTML5
+
 -- CSS3
+
+-- Sass
+
 
 ## Authors
 
 - [@yaiGenes](https://www.github.com/yaiGenes)
+-[AraBeitia](https://github.com/AranBeitia)
 
 ## Documentation
 
