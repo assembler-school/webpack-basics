@@ -1,0 +1,69 @@
+//A sass file called main.scss
+//(which will be responsible for importing the colors.scss and text.scss files)
+
+
+@use './abstracts'as a;
+
+
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: a.$secondary-color;
+
+  & img {
+    width: 3%;
+  }
+
+  & h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: a.$web-title-color;
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & button {
+    width: 30%;
+    background-color: a.$button-color;
+    border: none;
+    line-height: a.$line-height;
+    cursor: pointer;
+    margin-top: 1rem;
+
+  }
+}
+
+
+
+
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h2 {
+    color: a.$title-color;
+    background-color: a.$primary-color;
+    font-size: a.$font-size-title;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  & img {
+    max-width: 50%;
+
+  }
+
+  & p {
+    color: a.$text-color;
+    font-size: a.$font-size-body;
+  }
+}
