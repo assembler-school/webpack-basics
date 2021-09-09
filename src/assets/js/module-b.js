@@ -1,0 +1,1 @@
+$('body').append('<p>Text loaded by jQuery</p><div id="gallery"></div>')
