@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 
 module.exports = {
 
@@ -17,7 +16,7 @@ module.exports = {
 
   entry: path.resolve(__dirname, 'src/main.js'),  
   output: {
-    filename: 'bundle.[contenthash].js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
 
@@ -34,8 +33,6 @@ module.exports = {
       filename: 'index.html'
     }),
 
-    new CleanWebpackPlugin(),
-
   ],
   
   module: {
@@ -50,11 +47,11 @@ module.exports = {
           // Compiles Sass to CSS
           "sass-loader",
         ]
-      },/*
+      },
       {
         test: /\.(png|jpg|svg)$/i,
-        type: 'asset'
-      },*/
+        type: 'asset/inline'
+      },
       {
         test: /\.(png|jpe?g|svg)$/i,
         enforce: 'pre',
@@ -62,7 +59,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "[name].[hash].[ext]",
+              name: "[name].[ext]",
               outputPath: "images"
             }
           },
