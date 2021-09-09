@@ -2,9 +2,9 @@ import "./module-a.js";
 import "./module-b.js";
 import "../css/main.scss";
 import small from "../img/small.png";
-import svg from "../img/8kbsvg.svg";
-import med from "../img/170kb.png";
-import big from "../img/1mb.jpg";
+import svg from "../img/jasonderulo.svg";
+import med from "../img/happybunny.png";
+import big from "../img/beahorse.jpg";
 import favicon from "../img/webpack.png";
 
 $("#favicon").attr("href", favicon);
@@ -12,6 +12,18 @@ $("#img1").attr("src", small);
 $("#img2").attr("src", svg);
 $("#img3").attr("src", med);
 $("#img4").attr("src", big);
+
+
+// function picture() {
+//     let myPic01 = small;
+//     let img = document.getElementById("img1").src = myPic01;
+//     img.style.display = "block";
+// }
+
+// $("#modd").on("click", function() {
+//     $("#img1").toggleClass("show");
+//     return;
+// });
 
 $("#source").on("click", function() {
     $("header").toggleClass("purple");
