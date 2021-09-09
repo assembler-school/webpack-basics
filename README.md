@@ -89,6 +89,6 @@ This section is meant to explain the process followed to install webpack and the
 
  ## Run
  
- Some commands has been configured for _npm_, which can be used once all depencies had been installed:
+ Some commands have been configured for _npm_, which can be used once all depencies had been installed:
  - Run ````npm run build```` to build a bundle from _src_ folder. It will create (by default) the _dist_ `folder with the bundled files.
  - Run ````npm start```` to launch a live web server with automatic reloading, so that every time changes are made the _src_ files will be recompiled.
