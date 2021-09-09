@@ -14,7 +14,8 @@
 
 - [Technologies used](#technologies-used)
 - [Resources](#resources)
-- [Setup](#Setup)
+- [Setup](#setup)
+- [Run](#run)
 
 ## Technologies used
 
@@ -51,7 +52,8 @@ This section is meant to explain the process followed to install webpack and the
  # Plugins:
  
  1. The Webpack's built-in **ProvidePlugin** has been used to import automatically jQuery when the __$__ or __jQuery__ variables are parsed.
- 2. **HtmlWebpackPlugin** has been used to generate the _index.html_ file for the _dist_ bundle folder, from the _index.html_ located in the _src_ folder used as a template. It generates an HTML5 file that includes all your webpack bundles in the body using script tags. To install this plugin manually, the next command must be run:
+ 
+ 2. **HtmlWebpackPlugin** has been used to generate the _index.html_ file for the _dist_ bundle folder, using the _index.html_ file located in the _src_ folder as a template. It generates an HTML5 file that includes all your webpack bundles in the body using script tags. To install this plugin manually, the next command must be run:
 
 ```` npm install --save-dev html-webpack-plugin ````
 
@@ -69,18 +71,23 @@ This section is meant to explain the process followed to install webpack and the
 
  # Loaders:
  
- 1. **html-loader** to load html code for the _index.html_ file in the _dist_ folder. 
- ```` { test: /\.html$/i, loader: 'html-loader' } ````
- 1. **style-loader, css-loader** and **sass-loader** to process and load the style code for the _index.html_ file in the _dist_ folder. 
- ```` npm install sass-loader sass webpack ````
- 2. **asset** to load all image related type of files for the _index.html_ file in the _dist_ folder.
- ```` { test: /\.(png|svg|jpg|jpeg|gif)$/i, type: 'asset', } ````
- 3. **babel-loader** to transpile JavaScript files for the _index.html_ file in the _dist_ folder.
- ```` npm install -D babel-loader @babel/core @babel/preset-env webpack ````
+ 1. **html-loader** to parse the HTML as a string. It's required to load referenced images for the bundle.
+ 
+ ```` npm install --save-dev html-loader ````
+ 
+ 2. **css-loader** and **sass-loader** to parse and load the style code for the _index.html_ file in the _dist_ folder. 
+ 
+ ```` npm install --save-dev sass sass-loader  ````
+ 
+ 3. **babel-loader** to transpile _JavaScript_ files for the _index.html_ file in the _dist_ folder.
+ 
+ ```` npm install --save-dev babel-loader @babel/core @babel/preset-env webpack ````
 
+# Modules:
 
- ## Configuration
- - Entry and output:  Webpack needs an entry point, that will serve as the base to begin building its dependencies related to the other modules. The default entry file is ````index.js````.  The output property sets the place where the bundle created by webpack will be emitted to.
- ```` module.exports = { entry: './src/index.js', output: { path: path.resolve(__dirname, 'dist'), filename: 'bundle.js' } ````
- ## Get it working
- - After the webpack is properly set up, you can run ````npm run build```` to compile it. It will create (by default) the ````./dist```` `folder with ````bundle.js```` among other files. - You can also use the ````webpack-dev-server````, that provides you with a web server with live reloading so you don't have to manually compile the code every time you make changes.
+**Asset Module** is used to load all image related type of files for the _dist_ folder.
+
+ ## Run
+ - Some commands has been configured for _npm_, which can be used once all depencies had been installed:
+ - Run ````npm run build```` to build a bundle from _src_ folder. It will create (by default) the _dist_ `folder with the bundled files.
+ - Run ````npm start```` to launch a live web server with automatic reloading, so that every time changes are made the _src_ files will be recompiled.
