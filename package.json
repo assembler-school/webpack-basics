@@ -1,0 +1,36 @@
+{
+  "name": "webpack-pill",
+  "version": "1.0.0",
+  "description": "Mini project for assembler",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "watch": "webpack --watch",
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paola3stefania/webpack-pill.git"
+  },
+  "keywords": [],
+  "author": "Paola Estefania de Campos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paola3stefania/webpack-pill/issues"
+  },
+  "homepage": "https://github.com/Paola3stefania/webpack-pill#readme",
+  "devDependencies": {
+    "compression-webpack-plugin": "^8.0.1",
+    "css-loader": "^6.2.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "jquery": "^3.6.0",
+    "sass": "^1.39.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.1"
+  }
+}
