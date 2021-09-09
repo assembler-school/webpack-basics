@@ -1,0 +1,6 @@
+@use 'colors' as color;
+@import 'text';
+
+body {
+  color: color.$body-color;
+}
