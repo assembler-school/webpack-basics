@@ -20,6 +20,8 @@
 
 \* **CleanWebpackPlugin**: By default, this plugin will remove all files inside webpack's output.path directory, as well as all unused webpack assets after every successful rebuild.
 
+\* **TerserPlugin**: This plugin uses terser to minify/minimize your JavaScript.
+
 \* **ImageMinimizerPlugin**: This plugin uses imagemin to optimize your images.
 
 ## More modules used
