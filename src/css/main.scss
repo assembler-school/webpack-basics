@@ -1,0 +1,22 @@
+@use "_colors" as c;
+@use "_text" as t;
+
+.paragraph-1 {
+    color: c.$primary_color;
+    font-weight: t.$bold;
+}
+
+.paragraph-2 {
+    background-color: c.$secondary_color;
+    font-size: t.$large;
+}
+
+.img-container {
+    display: flex;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+}
