@@ -1,0 +1,16 @@
+ @import "./partials/colors";
+ @import "./partials/text";
+
+body{
+    background-color: $primary_color;
+    height: 100vh;
+}
+
+h3{
+    font-size: $font-size;
+}
+
+img{
+    width: 100px;
+    height: auto;
+}
